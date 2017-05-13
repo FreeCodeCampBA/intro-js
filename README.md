@@ -161,6 +161,84 @@ var unaFrase = lenguaje + ' apareció en ' + anio;
 ```
 
 <!-- slide -->
+## Number
+
+Números enteros ó de punto flotante.
+
+```javascript
+var unEntero = 27;
+```
+
+```javascript
+var unNumeroDePuntoFlotante = 2.5;
+```
+
+<!-- slide -->
+### Operaciones con Number
+
+#### Suma: `x + y`
+
+```javascript
+10 + 91;  // 101
+1 + Math.PI;  // 4.141592653589793
+```
+
+#### Resta: `x - y`
+
+```javascript
+27 - 4  // 23
+3 - 5  // -2
+3 - 1.5  // 1.5
+```
+
+<!-- slide -->
+### Operaciones con Number
+
+#### Multiplicación: `x * y`
+
+```javascript
+7 * 3  // 21
+4 * 12.5  // 50
+```
+
+#### División: `x / y`
+
+```javascript
+1 / 2  // 0.5
+8 / 2  // 4
+1.0 / 3.0  // 0.3333333333333333
+```
+
+<!-- slide -->
+#### Incremento
+Son equivalentes: `x = x + 1`, `x += 1`, `++x`, `x++`
+
+```javascript
+var x = 5;
+x += 1;  // 6;
+```
+
+#### Decremento
+Son equivalentes: `x = x - 1`, `x -= 1`, `--x`, `x--`
+
+```javascript
+var x = 5;
+x -= 1;  // 4;
+```
+
+<!-- slide -->
+#### Módulo: `x % y`
+
+Es el resto de dividir x por y.
+
+```javascript
+10 % 2  // 0
+11 % 2  // 11
+x % 2 === 0  // siempre que x sea par
+y % 2 === 1  // siempre que y sea impar
+```
+
+<!-- slide -->
 ## Coerción
 
 Podemos convertir los datos a otros tipos de forma explícita o implícita.  
