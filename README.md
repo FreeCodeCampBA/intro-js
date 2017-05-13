@@ -43,18 +43,21 @@ Espacios con nombre para guardar valores.
 
 Son **reutilizables** y se pueden reasignar.
 
+<!-- slide -->
 ### Declarar una variable
 
 ```javascript
 var a;
 ```
 
+<!-- slide -->
 ### Inicializar una variable
 
 ```javascript
 var a = 3;
 ```
 
+<!-- slide -->
 ### Reasignar una variable
 
 ```javascript
@@ -62,12 +65,14 @@ var a = 3;
 a = 7;
 ```
 
+<!-- slide -->
 ### Operar con variables
 
 ```javascript
 a + 2; // 3 + 2
 ```
 
+<!-- slide -->
 ## Cómo nombrar variables
 
 - Usar **nombres significativos**, que representen el contenido
@@ -75,6 +80,7 @@ a + 2; // 3 + 2
 - Hay distinción entre mayúsculas y minúsculas (**case sensitive**)
 - Por convención se utiliza **camelCase**
 
+<!-- slide -->
 ## Constantes
 
 Espacios con nombre para guardar **valores que no varían**.
@@ -85,6 +91,7 @@ Son **reutilizables**, pero **no se pueden reasignar**.
 Math.PI // 3.141592653589793;
 ```
 
+<!-- slide -->
 ### Si reasignamos una constante, obtenemos un error
 
 ```javascript
@@ -92,28 +99,33 @@ const saludo = 'Hola!';
 saludo = 'Hola Mundo!'; // TypeError
 ```
 
+<!-- slide -->
 ## Imprimir texto en la consola
 
 ```javascript
 console.log(nombreDeLaVariable);
 ```
 
+<!-- slide -->
 ## Tipos
 
 JavaScript tiene **tipado dinámico** y **débil**: las variables se declaran sin un tipo de dato explícito, pueden modificarse, compararse y operar sin necesidad de ser convertidas previamente.  
 
 Los **valores sí tienen tipos**.
 
+<!-- slide -->
 ### Tipos principales en JS
 
 - `String`
 - `Number`
 - `Boolean`
 
+<!-- slide -->
 ## Coerción
 
 Podemos convertir los datos a otros tipos de forma explícita o implícita. Esto último se conoce como **coerción de tipos**.
 
+<!-- slide -->
 ### Conversión explícita
 
 ```javascript
@@ -121,6 +133,7 @@ var unNumero = 5;
 var unCaracter = String(unNumero);
 ```
 
+<!-- slide -->
 ### Conversión implícita (coerción)
 
 ```javascript
