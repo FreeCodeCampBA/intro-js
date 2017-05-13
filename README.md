@@ -229,7 +229,7 @@ x -= 1;  // 4;
 <!-- slide -->
 #### Módulo: `x % y`
 
-Es el resto de dividir x por y.
+Es el resto de dividir `x` por `y`.
 
 ```javascript
 10 % 2  // 0
@@ -237,6 +237,19 @@ Es el resto de dividir x por y.
 x % 2 === 0  // siempre que x sea par
 y % 2 === 1  // siempre que y sea impar
 ```
+
+<!-- slide -->
+## Boolean
+
+Tiene 2 valores posibles: **true** y **false**, para indicar si algo es verdadero o falso.
+
+```javascript
+2 > 1  // true
+1 > 2  // false
+'hola' === 'Hola'  // false
+```
+
+**Nota:** al comparar valores, usar siempre `===`
 
 <!-- slide -->
 ## Coerción
