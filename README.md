@@ -121,9 +121,51 @@ Los **valores sí tienen tipos**.
 - `Boolean`
 
 <!-- slide -->
+## String
+
+Representan **cadenas de caracteres** (texto).
+
+Se escriben entre comillas simples ó dobles, **sin mezclar**.
+
+```javascript
+'JavaScript' ✔
+"JavaScript" ✔
+'JavaScript" ✗
+```
+
+<!-- slide -->
+### Operaciones con Strings
+
+#### Longitud
+
+```javascript
+var texto = 'You Don\'t Know JavaScript';
+texto.length;  // 25
+```
+
+```javascript
+'texto'.length;  // 5
+```
+
+<!-- slide -->
+### Operaciones con Strings
+
+#### Concatenación
+
+Se usa para unir diferentes cadenas de caracteres.
+
+```javascript
+var lenguaje = 'JavaScript';
+var anio = 1995;
+var unaFrase = lenguaje + ' apareció en ' + anio;
+```
+
+<!-- slide -->
 ## Coerción
 
-Podemos convertir los datos a otros tipos de forma explícita o implícita. Esto último se conoce como **coerción de tipos**.
+Podemos convertir los datos a otros tipos de forma explícita o implícita.  
+
+Esto último se conoce como **coerción de tipos**.
 
 <!-- slide -->
 ### Conversión explícita
