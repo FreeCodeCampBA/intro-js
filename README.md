@@ -3,6 +3,8 @@
 
 ![Introducción a JS](https://i.imgur.com/v4zxLB7.png)
 
+---
+
 <!-- slide -->
 ## freeCodeCamp BA ![freeCodeCamp BA logo](https://i.imgur.com/b4MqE3I.png)
 
@@ -132,9 +134,15 @@ Representan **cadenas de caracteres** (texto).
 Se escriben entre comillas simples ó dobles, **sin mezclar**.
 
 ```javascript
-'JavaScript' ✔
-"JavaScript" ✔
+'JavaScript' // OK ✔
+"JavaScript" // OK ✔
 'JavaScript" ✗
+```
+
+Cualquier texto entre comillas es un `String`
+
+```javascript
+'43' // Esto también es un String
 ```
 
 <!-- slide -->
@@ -143,12 +151,12 @@ Se escriben entre comillas simples ó dobles, **sin mezclar**.
 #### Longitud
 
 ```javascript
-var texto = 'You Don\'t Know JavaScript';
-texto.length;  // 25
+var titulo = 'You Don\'t Know JavaScript';
+titulo.length;  // 25
 ```
 
 ```javascript
-'texto'.length;  // 5
+'titulo'.length;  // 5
 ```
 
 <!-- slide -->
@@ -167,7 +175,7 @@ var unaFrase = lenguaje + ' apareció en ' + anio;
 <!-- slide -->
 ## Number
 
-Números enteros ó de punto flotante.
+Números enteros ó de punto flotante, JS no los diferencia.
 
 ```javascript
 var unEntero = 27;
@@ -175,6 +183,10 @@ var unEntero = 27;
 
 ```javascript
 var unNumeroDePuntoFlotante = 2.5;
+```
+
+```javascript
+var unEnteroNegativo = -10;
 ```
 
 <!-- slide -->
@@ -437,10 +449,10 @@ Contienen **propiedades**, que pueden ser valores de cualquier tipo, arrays, fun
 ### Creando un objeto
 
 ```javascript
-var unLibro = {
-  titulo: 'Como agua para chocolate',
-  autor: 'Laura Esquivel',
-  paginas: 256
+var unLibroRecomendado = {
+  titulo: 'Eloquent JavaScript',
+  autor: 'Marijn Haverbeke',
+  paginas: 472
 };
 ```
 
@@ -448,22 +460,22 @@ var unLibro = {
 ### Podemos acceder a los atributos por el nombre
 
 ```javascript
-unLibro.titulo;  // 'Como agua para chocolate'
-unLibro.autor;  // 'Laura Esquivel'
-unLibro.paginas;  // 256
+unLibroRecomendado.titulo;  // 'Eloquent JavaScript'
+unLibroRecomendado.autor;  // 'Marijn Haverbeke'
+unLibroRecomendado.paginas;  // 472
 ```
 
 <!-- slide -->
 ### Podemos redefinir los atributos
 
 ```javascript
-unLibro.titulo = 'Como JavaScript para chocolate';
+unLibroRecomendado.titulo = 'JavaScript Elocuente';
 ```
 
 ### Y crear atributos nuevos
 
 ```javascript
-unLibro.fechaDePublicacion = '11 de Mayo de 1989';
+unLibro.fechaDePublicacion = '14 de Diciembre de 2014';
 ```
 
 <!-- slide -->
@@ -745,3 +757,11 @@ for (let i = 0; i < animales.length; i++) {
 
 console.log(i); // ReferenceError: i is not defined
 ```
+
+<!-- slide -->
+# Para seguir aprendiendo...
+
+- **[JavaScript para Gatos](https://jsparagatos.com/)**
+- **[You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20%26%20going)**
+- **[Eloquent JavaScript](http://eloquentjavascript.net/)**
+- **[freeCodeCamp](https://freecodecamp.com)**
