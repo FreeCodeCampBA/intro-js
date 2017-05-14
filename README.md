@@ -363,3 +363,61 @@ Compara el valor y tipo
 ### Otras comparaciones
 
 `<`, `>`, `<=`, `>=`
+
+<!-- slide -->
+## Arrays
+
+Un array es una **colección ordenada de valores heterogéneos (de cualquier tipo)**.
+
+```javascript
+var unArregloVacio = [];
+```
+
+```javascript
+var unArregloDeNumeros = [1, 2, 3];
+```
+
+```javascript
+var unArregloDeCosas = [3.7, 2, 'JavaScript', [48, 7]];
+```
+
+<!-- slide -->
+### Para acceder a un elemento usamos índices
+
+Primer elemento: `[0]`
+
+```javascript
+unArregloDeNumeros[0];  // 1
+```
+
+Último elemento: `[longitud del arreglo - 1]`
+
+```javascript
+var ultimaPosicion = unArregloDeNumeros.length - 1;
+unArregloDeNumeros[ultimaPosicion];  // 3
+```
+
+**Nota:** los índices de los arrays empiezan en 0.
+
+
+<!-- slide -->
+### Modificar un Array
+
+#### Reasignar valores
+
+```javascript
+var unArregloDeNumeros = [19, 8, 3];
+unArregloDeNumeros[1] = 7.5;  // [19, 7.5, 3];
+```
+
+#### Agregar al final
+
+```javascript
+unArregloDeNumeros.push('FCC');  // [19, 7.5, 3, 'FCC'];
+```
+
+#### Sacar el último elemento
+
+```javascript
+unArregloDeNumeros.pop();  // 'FCC';
+```
