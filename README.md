@@ -88,7 +88,7 @@ Espacios con nombre para guardar **valores que no varían**.
 Son **reutilizables**, pero **no se pueden reasignar**.
 
 ```javascript
-Math.PI // 3.141592653589793;
+Math.PI  // 3.141592653589793;
 ```
 
 <!-- slide -->
@@ -96,7 +96,7 @@ Math.PI // 3.141592653589793;
 
 ```javascript
 const saludo = 'Hola!';
-saludo = 'Hola Mundo!'; // TypeError
+saludo = 'Hola Mundo!';  // TypeError
 ```
 
 <!-- slide -->
@@ -252,9 +252,36 @@ Tiene 2 valores posibles: **true** y **false**, para indicar si algo es verdader
 **Nota:** al comparar valores, usar siempre `===`
 
 <!-- slide -->
+## Otros tipos de datos
+
+Hay 2 tipos de datos especiales que también se usan frecuentemente en JavaScript: **null** y **undefined**.
+
+<!-- slide -->
+## Null
+
+Indica explícitamente que la variable **no tiene valor**.
+
+```javascript
+var estoEsNulo = null;
+```
+
+<!-- slide -->
+## Undefined
+
+Indica que la variable **no tiene valor definido**. Por ejemplo, si le asignamos el valor `undefined` explícitamente o sólo la declaramos, sin inicializarla.
+
+```javascript
+var conValorIndefinido = undefined;
+```
+
+```javascript
+var variableSoloDeclarada;  // undefined
+```
+
+<!-- slide -->
 ## Coerción
 
-Podemos convertir los datos a otros tipos de forma explícita o implícita.  
+Podemos convertir los datos a otros tipos de forma *explícita* o *implícita*.  
 
 Esto último se conoce como **coerción de tipos**.
 
