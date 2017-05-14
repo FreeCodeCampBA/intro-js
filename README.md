@@ -421,3 +421,43 @@ unArregloDeNumeros.push('FCC');  // [19, 7.5, 3, 'FCC'];
 ```javascript
 unArregloDeNumeros.pop();  // 'FCC';
 ```
+
+<!-- slide -->
+## Objetos
+
+Son **colecciones no ordenadas de pares clave-valor**.
+
+Contienen **propiedades**, que pueden ser valores de cualquier tipo, arrays, funciones o incluso otros objetos.
+
+<!-- slide -->
+### Creando un objeto
+
+```javascript
+var unLibro = {
+  titulo: 'Como agua para chocolate',
+  autor: 'Laura Esquivel',
+  paginas: 256
+};
+```
+
+<!-- slide -->
+### Podemos acceder a los atributos por el nombre
+
+```javascript
+unLibro.titulo;  // 'Como agua para chocolate'
+unLibro.autor;  // 'Laura Esquivel'
+unLibro.paginas;  // 256
+```
+
+<!-- slide -->
+### Podemos redefinir los atributos
+
+```javascript
+unLibro.titulo = 'Como JavaScript para chocolate';
+```
+
+### Y crear atributos nuevos
+
+```javascript
+unLibro.fechaDePublicacion = '11 de Mayo de 1989';
+```
