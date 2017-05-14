@@ -461,3 +461,283 @@ unLibro.titulo = 'Como JavaScript para chocolate';
 ```javascript
 unLibro.fechaDePublicacion = '11 de Mayo de 1989';
 ```
+
+<!-- slide -->
+### Condicionales
+
+Nos permiten decidir **qué camino seguir**, según las condiciones que evaluemos.
+
+```javascript
+if (condición booleana) {
+  // se ejecuta si la condición es verdadera
+} else {
+  // se ejecuta si la condición es falsa
+}
+```
+
+<!-- slide -->
+### Ejemplo
+
+```javascript
+var edad = 16;
+/*
+solo las personas que sean mayores a 18 años
+pueden entrar al boliche
+*/
+if (edad > 18) {
+  console.log('Puede entrar al boliche');
+} else {
+  console.log('No puede entrar al boliche');
+}
+```
+
+<!-- slide -->
+### Valores Falsos (falsy values)
+
+Toda esta lista de valores son falsos, y los que no se encuentren en la misma son verdaderos.
+
+- `false`
+- `null`
+- `undefined`
+- `''`
+- `0`
+- `NaN`
+
+<!-- slide -->
+### Null
+
+Indica explícitamente que la variable no tiene valor.
+```javascript
+var sinValor = null;
+```
+<!-- slide -->
+### Undefined
+
+Indica que la variable no tiene valor definido, o bien porque le fue asignado o bien porque sólo fue declarada.
+```javascript
+var conValorIndefinido = undefined;
+
+var variableSoloDeclarada;  // undefined
+```
+
+<!-- slide -->
+### NaN
+
+Representa el resultado de un cálculo matemático que no puede ser representado por un número significativo.
+```javascript
+var dividirPorString = 24 / "Hola"; // NaN
+```
+
+<!-- slide -->
+### Conversión automática en Condicionales
+
+```javascript
+var paquetesGalletitas = 0;
+
+// en este caso nuestra variable se evaluará por verdadero o falso
+if (paquetesGalletitas) {
+  console.log('Todavía hay galletitas');
+} else {
+  console.log('Hay que ir a comprar Oreos');
+}
+```
+
+<!-- slide -->
+### Ciclos
+
+Nos permiten iterar sobre diferentes **colecciones de valores**, como arreglos u objetos.
+Como también iterar hasta que ciertas **condiciones se cumplan o no**.
+
+<!-- slide -->
+### While
+
+Se ejecuta hasta que la **condición booleana sea falsa**.
+
+```javascript
+var i = 0;
+
+while (i < 5) {
+  console.log('Iteración N° ' + i);
+  i++;
+}
+```
+
+<!-- slide -->
+### Do While
+
+**Se ejecuta siempre al menos una vez**, independientemente de que la condición booleana sea verdadera.
+
+```javascript
+var i = 0;
+
+do {
+  console.log('Iteración N° ' + i);
+  i++;
+} while (i < 5);
+```
+
+<!-- slide -->
+### For
+Se ejecuta hasta que la **condición booleana sea falsa** y consiste en tres expresiones **opcionales**
+
+```javascript
+for (expresión inicial; condición; expresión final) {
+  ...
+};
+```
+
+* `expresión inicial:` declaramos una variable como contador
+* `condición:` expresión evaluada antes de cada iteración
+* `expresión final:` expresión evaluada al final de cada iteración
+
+<!-- slide -->
+### Ejemplo I
+
+```javascript
+for (var i = 0; i < 10; i++) {
+  console.log('Iteración N° ' + i);
+}
+```
+
+<!-- slide -->
+### Ejemplo II
+
+```javascript
+var animales = ['Perro', 'Gato', 'Tortuga'];
+
+// Recorremos el array animales y mostramos cada uno
+for (var i = 0; i < animales.length; i++) {
+  console.log('Las mascotas disponibles son: ' + animales[i]);
+}
+```
+
+<!-- slide -->
+### Funciones
+Son **bloques de código** con nombre, **reutilizables**.
+Pueden recibir (o no) **parámetros**.
+
+```javascript
+function nombreFuncion(primerParametro, segundoParametro) {
+  ...
+}
+```
+
+<!-- slide -->
+### Ejemplo I
+```javascript
+// devuelve la suma entre a y b
+function sumarDosValores(a, b) {
+  return a + b;
+}
+
+sumarDosValores(2, 4);
+```
+<!-- slide -->
+### Ejemplo II
+```javascript
+// devuelve el total con solo 2 decimales
+function imprimirTotal(total) {
+  return total.toFixed(2);
+}
+
+imprimirTotal(10.6533);
+```
+
+<!-- slide -->
+### Callbacks
+Los callbacks **no son una característica** de JavaScript.
+Son una **manera de usar las funciones**.
+
+<!-- slide -->
+### Código Sincrónico
+Si queremos ejecutar `enviarMensaje()` debemos de esperar a que las instrucciones anteriores finalicen su operación.
+Es decir que hasta no se termine de ejecutar `descargarFoto()` no podremos ejecutar nada más.
+```javascript
+var foto = descargarFoto('https://google.com/logo.png');
+subirFotoTwitter(foto);
+enviarMensajeTwitter('Hey! Cuando nos juntamos?', '@leogln_');
+```
+
+<!-- slide -->
+### Código Asincrónico
+Ahora podremos ejecutar `enviarMensajeTwitter()` mientras se descarga la foto, y que la suba a Twitter cuando esta finalice de descargar.
+```javascript
+descargarFoto('https://google.com/logo.png',
+ function finalizoDescarga(error, png) {
+  if (error) {
+    console.log('error: ', error);
+  } else {
+    subirFotoTwitter(png);
+  }
+});
+
+enviarMensajeTwitter('Hey! Cuando nos juntamos?', '@leogln_')
+```
+
+<!-- slide -->
+### Scope
+Es el **ámbito o alcance de una variable**, donde esta 'vive' y desde donde puede ser accedida y modificada.
+
+<!-- slide -->
+### Según la declaración
+- `var` el scope está ligada a una función
+
+- `let y const` tienen alcance dentro de un bloque de código
+
+<!-- slide -->
+### Warnings!
+En JavaScript podemos declarar variables sin usar var, let o const, **¡pero el scope pasa a ser global!**
+
+
+Esto significa que la variable puede ser accedida y modificada **desde cualquier parte de nuestro código**.
+
+<!-- slide -->
+### Ejemplo I
+```JavaScript
+var saludo = 'Bienvenidos! al evento';
+
+function saludar() {
+  console.log(saludo);
+}
+
+saludar(); // Bienvenidos! al evento
+
+console.log(saludo); // Bienvenidos! al evento
+```
+
+<!-- slide -->
+### Ejemplo II
+```JavaScript
+function saludar() {
+  var saludo = 'Bienvenidos! al evento';
+  console.log(saludo);
+}
+
+saludar(); // Bienvenidos! al evento
+
+console.log(saludo); // ReferenceError: saludo is not defined
+```
+
+<!-- slide -->
+### Ejemplo III
+```JavaScript
+var animales = ['Perro', 'Gato', 'Tortuga'];
+
+for (var i = 0; i < animales.length; i++) {
+  console.log('Las mascotas disponibles son: ' + animales[i]);
+}
+
+console.log(i); // 3
+```
+<!-- slide -->
+### Ejemplo IV
+```JavaScript
+const animales = ['Perro', 'Gato', 'Tortuga'];
+
+// Recorremos el array animales y mostramos cada uno
+for (let i = 0; i < animales.length; i++) {
+  console.log('Las mascotas disponibles son: ' + animales[i]);
+}
+
+console.log(i); // ReferenceError: i is not defined
+```
