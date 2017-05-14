@@ -1,8 +1,10 @@
 <!-- slide -->
 # Introducción a JavaScript
 
+![Introducción a JS](https://i.imgur.com/v4zxLB7.png)
+
 <!-- slide -->
-## freeCodeCamp BA
+## freeCodeCamp BA ![freeCodeCamp BA logo](https://i.imgur.com/b4MqE3I.png)
 
 - **[freecodecampba.org](https://freecodecampba.org)**  
 - **[@freeCodeCampBA](https://twitter.com/freeCodeCampBA)**
@@ -31,10 +33,14 @@ Es **código ejecutable**.
 a = b * 2;
 ```
 
-Las sentencias terminan con `;`
+Las sentencias en JS terminan con `;`
+
+De ahora en adelante, vamos a escribir usando la sintaxis de JavaScript.
 
 <!-- slide -->
-# Importante: prueben el código en su consola
+## Importante: probá todo el código en tu consola
+
+![Chrome's console](https://developers.google.com/web/tools/chrome-devtools/console/images/console-panel.png)
 
 <!-- slide -->
 ## Variables
@@ -50,14 +56,12 @@ Son **reutilizables** y se pueden reasignar.
 var a;
 ```
 
-<!-- slide -->
 ### Inicializar una variable
 
 ```javascript
 var a = 3;
 ```
 
-<!-- slide -->
 ### Reasignar una variable
 
 ```javascript
