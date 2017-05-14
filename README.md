@@ -325,3 +325,41 @@ var unCaracter = unNumero + '';
   Leonardo Da Vinci
 */
 ```
+
+<!-- slide -->
+## Comparar valores
+
+### Igualdad
+
+Compara sólo el valor
+
+```javascript
+1 == 1  // true
+1 == '1'  // true
+```
+### Igualdad estricta
+
+Compara el valor y tipo
+
+```javascript
+1 === 1  // true
+1 === '1'  // false
+```
+
+<!-- slide -->
+### Desigualdad
+
+```javascript
+23 != '23'  // false
+```
+
+### Desigualdad estricta
+
+```javascript
+23 !== '23'  // true
+```
+
+<!-- slide -->
+### Otras comparaciones
+
+`<`, `>`, `<=`, `>=`
