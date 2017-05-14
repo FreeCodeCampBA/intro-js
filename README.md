@@ -28,8 +28,7 @@ Desde hace algunos años, podemos ejecutar código JavaScript fuera del browser,
 <!-- slide -->
 ## Sentencia
 
-Conjunto de caracteres y símbolos que representan una **instrucción**.  
-Es **código ejecutable**.
+Conjunto de caracteres y símbolos que representan una **instrucción**. Está compuesta por **expresiones**.
 
 ```javascript
 a = b * 2;
@@ -37,7 +36,26 @@ a = b * 2;
 
 Las sentencias en JS terminan con `;`
 
-De ahora en adelante, vamos a escribir usando la sintaxis de JavaScript.
+<!-- slide -->
+## Expresión
+
+Es **cualquier unidad válida de código que resuelve a un valor**.
+
+Expresiones marcadas con `()`
+
+```javascript
+((a) = ((b) * (2)));
+```
+
+Tomemos `a = x` y `b = 7`.
+Entonces:
+
+```javascript
+x = 7 * 2; // x = 14
+```
+
+<!-- slide -->
+## De ahora en adelante, vamos a escribir usando la sintaxis de JavaScript.
 
 <!-- slide -->
 ## Importante: probá todo el código en tu consola
@@ -148,7 +166,7 @@ Cualquier texto entre comillas es un `String`
 <!-- slide -->
 ### Operaciones con Strings
 
-#### Longitud
+#### Longitud de la cadena
 
 ```javascript
 var titulo = 'You Don\'t Know JavaScript';
@@ -164,7 +182,7 @@ titulo.length;  // 25
 
 #### Concatenación
 
-Se usa para unir diferentes cadenas de caracteres.
+Se usa para combinar diferentes cadenas de caracteres.
 
 ```javascript
 var lenguaje = 'JavaScript';
@@ -268,6 +286,156 @@ Tiene 2 valores posibles: **true** y **false**, para indicar si algo es verdader
 **Nota:** al comparar valores, usar siempre `===`
 
 <!-- slide -->
+### Expresión booleana
+
+Es cualquier expresión que pueda evaluarse como verdadera ó falsa y por lo tanto, reducirse a `true` ó `false`.
+
+<!-- slide -->
+## Operadores de comparación
+
+### Igualdad `==`
+
+Compara **sólo el valor**
+
+```javascript
+1 == 1  // true
+1 == '1'  // true
+```
+
+<!-- slide -->
+### Igualdad estricta `===`
+
+Compara el **valor y tipo del mismo**
+
+```javascript
+1 === 1  // true
+1 === '1'  // false
+```
+
+<!-- slide -->
+
+Son análogos a la igualdad.
+
+### Desigualdad `!=`
+
+```javascript
+23 != '23'  // false
+```
+
+### Desigualdad estricta `!==`
+
+```javascript
+23 !== '23'  // true
+```
+
+<!-- slide -->
+### Otros operadores de comparación
+
+#### Menor `<`
+
+```javascript
+1 < 2  // true
+```
+
+También podemos comparar caracteres, según su orden en la tabla ASCII.
+
+```javascript
+'a' < 'b'  // true
+```
+
+#### Mayor `>`
+
+```javascript
+77.5 > 80  // false
+```
+
+<!-- slide -->
+#### Menor ó igual `<=`
+
+```javascript
+10 <= 10  // true
+```
+
+#### Mayor ó igual `>=`
+
+```javascript
+31 >= 33  // false
+```
+
+<!-- slide -->
+## Operadores lógicos
+
+Se utilizan para evaluar **valores y expresiones booleanas**.
+Retornan un valor booleano.
+
+<!-- slide -->
+### AND `&&`
+
+Retorna `true` **si y sólo si todas las expresiones evaluadas son verdaderas**. Caso contrario, retorna `false`.
+
+```javascript
+true && true  // true
+```
+
+<!-- slide -->
+### OR `||`
+
+Retorna `true` si **al menos una de las expresiones es verdadera**; sino, retorna `false`.
+
+```javascript
+true || true  // true
+```
+
+```javascript
+true || false  // true
+```
+
+```javascript
+false || false  // false
+```
+
+<!-- slide -->
+### NOT `!`
+
+**Negación**. Retorna `false` si la expresión es verdadera; sino, retorna `true`.
+
+```javascript
+!(true)  // false
+```
+
+```javascript
+!(2 > 1)  // false
+```
+
+```javascript
+!(expresión booleana verdadera)  // false
+```
+
+<!-- slide -->
+### Ejercicio
+
+¿Cuál es el resultado final, `true` ó `false`?
+
+```javascript
+var x = 10;
+var y = 'a';
+
+y === 'b' || x >= 10
+```
+
+<!-- slide -->
+### Ejercicio
+
+¿Cuál es el resultado final, `true` ó `false`?
+
+```javascript
+var x = 3;
+var y = 8;
+
+!(x == '3' || x === y) && !(y != 8 && x <= y)
+```
+
+<!-- slide -->
 ## Otros tipos de datos
 
 Hay 2 tipos de datos especiales que también se usan frecuentemente en JavaScript: **null** y **undefined**.
@@ -343,47 +511,9 @@ var unCaracter = unNumero + '';
 ```
 
 <!-- slide -->
-## Comparar valores
-
-### Igualdad
-
-Compara sólo el valor
-
-```javascript
-1 == 1  // true
-1 == '1'  // true
-```
-### Igualdad estricta
-
-Compara el valor y tipo
-
-```javascript
-1 === 1  // true
-1 === '1'  // false
-```
-
-<!-- slide -->
-### Desigualdad
-
-```javascript
-23 != '23'  // false
-```
-
-### Desigualdad estricta
-
-```javascript
-23 !== '23'  // true
-```
-
-<!-- slide -->
-### Otras comparaciones
-
-`<`, `>`, `<=`, `>=`
-
-<!-- slide -->
 ## Arrays
 
-Un array es una **colección ordenada de valores heterogéneos (de cualquier tipo)**.
+Un `array` es una **colección ordenada de valores heterogéneos (de cualquier tipo)**.
 
 ```javascript
 var unArregloVacio = [];
@@ -417,7 +547,7 @@ unArregloDeNumeros[ultimaPosicion];  // 3
 
 
 <!-- slide -->
-### Modificar un Array
+### Modificar un `Array`
 
 #### Reasignar valores
 
@@ -436,6 +566,30 @@ unArregloDeNumeros.push('FCC');  // [19, 7.5, 3, 'FCC'];
 
 ```javascript
 unArregloDeNumeros.pop();  // 'FCC';
+```
+
+<!-- slide -->
+### Nota: Strings e índices
+
+También **podemos acceder a los caracteres de un `String`** usando índices (como si fuera un `Array` de caracteres), pero **no podemos modificarlo** (los `Strings` en JavaScript son *inmutables*).
+
+Si quisiéramos hacerlo, tendríamos que convertirlo primero a `Array`, operar y luego pasarlo a `String` nuevamente.
+
+```javascript
+var unString = 'Puedo acceder a los caracteres de este texto, pero no modificarlo';
+```
+
+#### Acceder a un caracter de un `String`
+
+```javascript
+console.log(unString[2]);  // e
+```
+
+<!-- slide -->
+### Convierto el `String` a `Array`
+
+```javascript
+console.log(unString.toSplit(' '));  // e
 ```
 
 <!-- slide -->
@@ -761,7 +915,10 @@ console.log(i); // ReferenceError: i is not defined
 <!-- slide -->
 # Para seguir aprendiendo...
 
+Algunos **recursos gratuitos** recomendados
+
 - **[JavaScript para Gatos](https://jsparagatos.com/)**
 - **[You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20%26%20going)**
 - **[Eloquent JavaScript](http://eloquentjavascript.net/)**
 - **[freeCodeCamp](https://freecodecamp.com)**
+- Documentación: [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
