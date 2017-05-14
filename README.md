@@ -304,3 +304,24 @@ luego de convertir el tipo de unNumero
 */
 var unCaracter = unNumero + '';
 ```
+
+<!-- slide -->
+## Comentarios
+
+### 1 sola línea
+
+```javascript
+// Esto es un comentario simple
+```
+
+### Multilínea
+
+```javascript
+/*
+  Los que se enamoran de la práctica sin la teoría
+  son como los pilotos sin timón ni brújula,
+  que nunca podrán saber a dónde van
+
+  Leonardo Da Vinci
+*/
+```
