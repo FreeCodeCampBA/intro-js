@@ -464,6 +464,15 @@ var variableSoloDeclarada;  // undefined
 ```
 
 <!-- slide -->
+### NaN
+
+Expresa el resultado de un cálculo matemático que no puede ser representado númericamente.
+
+```javascript
+var dividirPorString = 24 / "Hola"; // NaN
+```
+
+<!-- slide -->
 ## Coerción
 
 Podemos convertir los datos a otros tipos de forma *explícita* o *implícita*.  
@@ -634,7 +643,7 @@ unLibro.fechaDePublicacion = '14 de Diciembre de 2014';
 ```
 
 <!-- slide -->
-### Condicionales
+## Condicionales
 
 Nos permiten decidir **qué camino seguir**, según las condiciones que evaluemos.
 
@@ -663,9 +672,9 @@ if (edad > 18) {
 ```
 
 <!-- slide -->
-### Valores Falsos (falsy values)
+### Valores falsos (falsy values)
 
-Toda esta lista de valores son falsos, y los que no se encuentren en la misma son verdaderos.
+Son aquellos valores que se interpretan como *falsos* **si se evalúan en el contexto de una expresión booleana**.
 
 - `false`
 - `null`
@@ -675,32 +684,12 @@ Toda esta lista de valores son falsos, y los que no se encuentren en la misma so
 - `NaN`
 
 <!-- slide -->
-### Null
+### Valores verdaderos (truthy values)
 
-Indica explícitamente que la variable no tiene valor.
-```javascript
-var sinValor = null;
-```
-<!-- slide -->
-### Undefined
-
-Indica que la variable no tiene valor definido, o bien porque le fue asignado o bien porque sólo fue declarada.
-```javascript
-var conValorIndefinido = undefined;
-
-var variableSoloDeclarada;  // undefined
-```
+**Todos los valores que no se encuentren en la lista anterior** (falsy values), son *verdaderos*.
 
 <!-- slide -->
-### NaN
-
-Representa el resultado de un cálculo matemático que no puede ser representado por un número significativo.
-```javascript
-var dividirPorString = 24 / "Hola"; // NaN
-```
-
-<!-- slide -->
-### Conversión automática en Condicionales
+### Conversión automática en condicionales
 
 ```javascript
 var paquetesGalletitas = 0;
@@ -714,10 +703,11 @@ if (paquetesGalletitas) {
 ```
 
 <!-- slide -->
-### Ciclos
+## Ciclos
 
 Nos permiten iterar sobre diferentes **colecciones de valores**, como arreglos u objetos.
-Como también iterar hasta que ciertas **condiciones se cumplan o no**.
+
+También iterar hasta que ciertas **condiciones se cumplan o no**.
 
 <!-- slide -->
 ### While
@@ -734,7 +724,7 @@ while (i < 5) {
 ```
 
 <!-- slide -->
-### Do While
+### Do... While
 
 **Se ejecuta siempre al menos una vez**, independientemente de que la condición booleana sea verdadera.
 
@@ -749,6 +739,7 @@ do {
 
 <!-- slide -->
 ### For
+
 Se ejecuta hasta que la **condición booleana sea falsa** y consiste en tres expresiones **opcionales**
 
 ```javascript
@@ -762,7 +753,7 @@ for (expresión inicial; condición; expresión final) {
 * `expresión final:` expresión evaluada al final de cada iteración
 
 <!-- slide -->
-### Ejemplo I
+#### Ejemplo I
 
 ```javascript
 for (var i = 0; i < 10; i++) {
@@ -771,7 +762,7 @@ for (var i = 0; i < 10; i++) {
 ```
 
 <!-- slide -->
-### Ejemplo II
+#### Ejemplo II
 
 ```javascript
 var animales = ['Perro', 'Gato', 'Tortuga'];
@@ -783,7 +774,8 @@ for (var i = 0; i < animales.length; i++) {
 ```
 
 <!-- slide -->
-### Funciones
+## Funciones
+
 Son **bloques de código** con nombre, **reutilizables**.
 Pueden recibir (o no) **parámetros**.
 
@@ -795,6 +787,7 @@ function nombreFuncion(primerParametro, segundoParametro) {
 
 <!-- slide -->
 ### Ejemplo I
+
 ```javascript
 // devuelve la suma entre a y b
 function sumarDosValores(a, b) {
@@ -803,8 +796,10 @@ function sumarDosValores(a, b) {
 
 sumarDosValores(2, 4);
 ```
+
 <!-- slide -->
 ### Ejemplo II
+
 ```javascript
 // devuelve el total con solo 2 decimales
 function imprimirTotal(total) {
@@ -816,13 +811,16 @@ imprimirTotal(10.6533);
 
 <!-- slide -->
 ### Callbacks
+
 Los callbacks **no son una característica** de JavaScript.
 Son una **manera de usar las funciones**.
 
 <!-- slide -->
-### Código Sincrónico
+### Código sincrónico
+
 Si queremos ejecutar `enviarMensaje()` debemos de esperar a que las instrucciones anteriores finalicen su operación.
 Es decir que hasta no se termine de ejecutar `descargarFoto()` no podremos ejecutar nada más.
+
 ```javascript
 var foto = descargarFoto('https://google.com/logo.png');
 subirFotoTwitter(foto);
@@ -830,8 +828,10 @@ enviarMensajeTwitter('Hey! Cuando nos juntamos?', '@leogln_');
 ```
 
 <!-- slide -->
-### Código Asincrónico
+### Código asincrónico
+
 Ahora podremos ejecutar `enviarMensajeTwitter()` mientras se descarga la foto, y que la suba a Twitter cuando esta finalice de descargar.
+
 ```javascript
 descargarFoto('https://google.com/logo.png',
  function finalizoDescarga(error, png) {
@@ -846,25 +846,27 @@ enviarMensajeTwitter('Hey! Cuando nos juntamos?', '@leogln_')
 ```
 
 <!-- slide -->
-### Scope
+## Scope
+
 Es el **ámbito o alcance de una variable**, donde esta 'vive' y desde donde puede ser accedida y modificada.
 
 <!-- slide -->
 ### Según la declaración
-- `var` el scope está ligada a una función
 
-- `let y const` tienen alcance dentro de un bloque de código
+- `var` el scope está ligada a una función
+- `let` y `const` tienen alcance dentro de un bloque de código
 
 <!-- slide -->
-### Warnings!
-En JavaScript podemos declarar variables sin usar var, let o const, **¡pero el scope pasa a ser global!**
+### Warning!
 
+En JavaScript podemos declarar variables sin usar var, let o const, **¡pero el scope pasa a ser global!**
 
 Esto significa que la variable puede ser accedida y modificada **desde cualquier parte de nuestro código**.
 
 <!-- slide -->
 ### Ejemplo I
-```JavaScript
+
+```javascript
 var saludo = 'Bienvenidos! al evento';
 
 function saludar() {
@@ -878,7 +880,8 @@ console.log(saludo); // Bienvenidos! al evento
 
 <!-- slide -->
 ### Ejemplo II
-```JavaScript
+
+```javascript
 function saludar() {
   var saludo = 'Bienvenidos! al evento';
   console.log(saludo);
@@ -891,7 +894,8 @@ console.log(saludo); // ReferenceError: saludo is not defined
 
 <!-- slide -->
 ### Ejemplo III
-```JavaScript
+
+```javascript
 var animales = ['Perro', 'Gato', 'Tortuga'];
 
 for (var i = 0; i < animales.length; i++) {
@@ -900,9 +904,11 @@ for (var i = 0; i < animales.length; i++) {
 
 console.log(i); // 3
 ```
+
 <!-- slide -->
 ### Ejemplo IV
-```JavaScript
+
+```javascript
 const animales = ['Perro', 'Gato', 'Tortuga'];
 
 // Recorremos el array animales y mostramos cada uno
