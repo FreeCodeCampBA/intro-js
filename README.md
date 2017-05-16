@@ -55,10 +55,7 @@ x = 7 * 2; // x = 14
 ```
 
 <!-- slide -->
-## De ahora en adelante, vamos a escribir usando la sintaxis de JavaScript.
-
-<!-- slide -->
-## Importante: probá todo el código en tu consola
+## Importante: probá el código en tu consola
 
 ![Chrome's console](https://developers.google.com/web/tools/chrome-devtools/console/images/console-panel.png)
 
@@ -72,21 +69,25 @@ Son **reutilizables** y se pueden reasignar.
 <!-- slide -->
 ### Declarar una variable
 
+Usamos la **keyword** `var` para crear nuevas variables.
+
 ```javascript
-var a;
+var nombreDeLaVariable;
 ```
 
+<!-- slide -->
 ### Inicializar una variable
 
 ```javascript
-var a = 3;
+var nombreDeLaVariable = 3;
 ```
 
+<!-- slide -->
 ### Reasignar una variable
 
 ```javascript
-var a = 3;
-a = 7;
+var nombreDeLaVariable = 3;
+nombreDeLaVariable = 7;
 ```
 
 <!-- slide -->
