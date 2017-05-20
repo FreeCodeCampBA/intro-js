@@ -170,7 +170,7 @@ Cualquier texto entre comillas es un `String`
 #### Longitud de la cadena
 
 ```javascript
-var titulo = 'You Don\'t Know JavaScript';
+var titulo = "You Don't Know JavaScript";
 titulo.length;  // 25
 ```
 
@@ -187,8 +187,8 @@ Se usa para combinar diferentes cadenas de caracteres.
 
 ```javascript
 var lenguaje = 'JavaScript';
-var anio = 1995;
-var unaFrase = lenguaje + ' apareció en ' + anio;
+var año = 1995;
+var unaFrase = lenguaje + ' apareció en ' + año;
 ```
 
 <!-- slide -->
@@ -401,6 +401,7 @@ false || false  // false
 **Negación**. Retorna `false` si la expresión es verdadera; sino, retorna `true`.
 
 ```javascript
+// En este caso poner !(true) o bien !true es lo mismo
 !(true)  // false
 ```
 
@@ -599,7 +600,8 @@ console.log(unString[2]);  // e
 ### Convierto el `String` a `Array`
 
 ```javascript
-console.log(unString.toSplit(' '));  // e
+console.log(unString.split(' '));
+// ['Puedo', 'acceder', 'a', 'los', 'caracteres', 'de', 'este', 'texto,', 'pero', 'no', 'modificarlo'];
 ```
 
 <!-- slide -->
@@ -720,7 +722,7 @@ var i = 0;
 while (i < 5) {
   console.log('Iteración N° ' + i);
   i++;
-}
+} // Iteración N° 0 hasta Iteración N° 4
 ```
 
 <!-- slide -->
@@ -842,7 +844,7 @@ descargarFoto('https://google.com/logo.png',
   }
 });
 
-enviarMensajeTwitter('Hey! Cuando nos juntamos?', '@leogln_')
+enviarMensajeTwitter('Hey! Cuando nos juntamos?', '@leogln_');
 ```
 
 <!-- slide -->
