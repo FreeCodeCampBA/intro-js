@@ -26,35 +26,6 @@ Es el lenguaje que entienden y ejecutan los navegadores (browsers).
 Desde hace algunos años, podemos ejecutar código JavaScript fuera del browser, con **NodeJS**.
 
 <!-- slide -->
-## Sentencia
-
-Conjunto de caracteres y símbolos que representan una **instrucción**. Está compuesta por **expresiones**.
-
-```javascript
-a = b * 2;
-```
-
-Las sentencias en JS terminan con `;`
-
-<!-- slide -->
-## Expresión
-
-Es **cualquier unidad válida de código que resuelve a un valor**.
-
-Expresiones marcadas con `()`
-
-```javascript
-((a) = ((b) * (2)));
-```
-
-Tomemos `a = x` y `b = 7`.
-Entonces:
-
-```javascript
-x = 7 * 2; // x = 14
-```
-
-<!-- slide -->
 ## Importante: probá el código en tu consola
 
 ![Chrome's console](https://developers.google.com/web/tools/chrome-devtools/console/images/console-panel.png)
@@ -62,28 +33,62 @@ x = 7 * 2; // x = 14
 <!-- slide -->
 ## Variables
 
-Espacios con nombre para guardar valores.
+Es una caja para guardar **valores**, de diferentes tipos. Esta caja tiene una etiqueta, el **nombre** de la variable.
 
-Son **reutilizables** y se pueden reasignar.
+![variable](https://farm5.static.flickr.com/4051/4313722503_f6289e9b55_o.jpg)
+
+Son **reutilizables**: una vez creadas, podemos usarlas todas las veces que querramos.
+
+Se pueden **reasignar**: cambiamos su valor. Por esto se llaman variables.
 
 <!-- slide -->
 ### Declarar una variable
 
-Usamos la **keyword** `var` para crear nuevas variables.
+Declarar es **crear una nueva variable**.
+
+Usamos la palabra `var` para crear nuevas variables.
 
 ```javascript
 var nombreDeLaVariable;
 ```
 
+**Nota**: las sentencias en JS terminan con `;`
+
+<!-- slide -->
+#### Ejercicio 1: declarar la variable `nombre`
+
+<!-- slide -->
+#### Solución ejercicio 1
+
+```javascript
+var nombre;
+```
+
 <!-- slide -->
 ### Inicializar una variable
+
+Inicializar una variable consiste en crearla (declararla) y asignarle un valor inicial.
 
 ```javascript
 var nombreDeLaVariable = 3;
 ```
 
 <!-- slide -->
+#### Ejercicio 2: declarar la variable `nombre` e inicializarla
+
+<!-- slide -->
+#### Solución ejercicio 2
+
+```javascript
+var nombre = 'Tu Nombre';
+```
+
+<!-- slide -->
 ### Reasignar una variable
+
+¿Te acordás que las variables se podían reasignar?
+
+Una vez que creamos una variable y la inicializamos, ya podemos empezar a usarla, también podemos cambiar su valor, es decir, reasignarla.
 
 ```javascript
 var nombreDeLaVariable = 3;
@@ -91,10 +96,31 @@ nombreDeLaVariable = 7;
 ```
 
 <!-- slide -->
+#### Ejercicio 3: reasignar la variable `nombre` que creamos
+
+<!-- slide -->
+#### Solución ejercicio 3
+
+```javascript
+var nombre = 'freeCodeCamp';
+```
+
+<!-- slide -->
 ### Operar con variables
 
 ```javascript
 a + 2; // 3 + 2
+```
+
+<!-- slide -->
+#### Ejercicio 4: crear la variable `unNumero`, inicializarla con el valor 1. En otra instrucción, sumarle 3 a la misma variable
+
+<!-- slide -->
+#### Solución ejercicio 4
+
+```javascript
+var unNumero = 1;
+unNumero + 3;
 ```
 
 <!-- slide -->
@@ -108,12 +134,12 @@ a + 2; // 3 + 2
 <!-- slide -->
 ## Constantes
 
-Espacios con nombre para guardar **valores que no varían**.
+Espacios con nombre para guardar **valores** (cajas con etiquetas, como las variables) que no varían.
 
 Son **reutilizables**, pero **no se pueden reasignar**.
 
 ```javascript
-Math.PI  // 3.141592653589793;
+const x = 1;
 ```
 
 <!-- slide -->
@@ -602,46 +628,6 @@ console.log(unString[2]);  // e
 ```javascript
 console.log(unString.split(' '));
 // ['Puedo', 'acceder', 'a', 'los', 'caracteres', 'de', 'este', 'texto,', 'pero', 'no', 'modificarlo'];
-```
-
-<!-- slide -->
-## Objetos
-
-Son **colecciones no ordenadas de pares clave-valor**.
-
-Contienen **propiedades**, que pueden ser valores de cualquier tipo, arrays, funciones o incluso otros objetos.
-
-<!-- slide -->
-### Creando un objeto
-
-```javascript
-var unLibroRecomendado = {
-  titulo: 'Eloquent JavaScript',
-  autor: 'Marijn Haverbeke',
-  paginas: 472
-};
-```
-
-<!-- slide -->
-### Podemos acceder a los atributos por el nombre
-
-```javascript
-unLibroRecomendado.titulo;  // 'Eloquent JavaScript'
-unLibroRecomendado.autor;  // 'Marijn Haverbeke'
-unLibroRecomendado.paginas;  // 472
-```
-
-<!-- slide -->
-### Podemos redefinir los atributos
-
-```javascript
-unLibroRecomendado.titulo = 'JavaScript Elocuente';
-```
-
-### Y crear atributos nuevos
-
-```javascript
-unLibro.fechaDePublicacion = '14 de Diciembre de 2014';
 ```
 
 <!-- slide -->
