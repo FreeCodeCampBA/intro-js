@@ -909,6 +909,19 @@ function multiplicar(primerValor, segundoValor) {
 ```
 
 <!-- slide -->
+### Ejercicio Final
+
+En este ejercicio vamos a crear un sistema sencillo para un **Video Club**
+Utilizando todo lo aprendido hasta ahora, strings, arreglos, funciones, etc...
+Vamos a escribir una función que verifique si las películas que quiere el cliente se encuentran o no en stock.
+
+1. Debe contar con una lista con las siguientes películas:
+'The Avengers', 'Inception', 'The Matrix', 'The Lord of the Rings'
+2. El cliente pide 2 películas una que se encuentra en stock y otra que no
+3. Debe de verificar si la pedida por el cliente se encuentre entre una de ellas
+4. Debería de mostrar un mensaje tanto la película se encuentra en stock como sino se encuentra en stock
+
+<!-- slide -->
 # Para seguir aprendiendo...
 
 Algunos **recursos gratuitos** recomendados
