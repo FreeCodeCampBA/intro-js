@@ -26,11 +26,6 @@ Es el lenguaje que entienden y ejecutan los navegadores (browsers).
 Desde hace algunos años, podemos ejecutar código JavaScript fuera del browser, con **NodeJS**.
 
 <!-- slide -->
-## Importante: probá el código en tu consola
-
-![Chrome's console](https://developers.google.com/web/tools/chrome-devtools/console/images/console-panel.png)
-
-<!-- slide -->
 ## Variables
 
 Es una caja para guardar **valores**, de diferentes tipos. Esta caja tiene una etiqueta, el **nombre** de la variable.
@@ -55,7 +50,14 @@ var nombreDeLaVariable;
 **Nota**: las sentencias en JS terminan con `;`
 
 <!-- slide -->
-#### Ejercicio 1: declarar la variable `nombre`
+## Importante: probá el código en tu consola!
+
+![Chrome's console](https://developers.google.com/web/tools/chrome-devtools/console/images/console-panel.png)
+
+<!-- slide -->
+#### Ejercicio 1
+
+Declarar la variable `nombre`
 
 <!-- slide -->
 #### Solución ejercicio 1
@@ -74,7 +76,9 @@ var nombreDeLaVariable = 3;
 ```
 
 <!-- slide -->
-#### Ejercicio 2: declarar la variable `nombre` e inicializarla
+#### Ejercicio 2
+
+Declarar la variable `nombre` e inicializarla con tu nombre, escrito entre comillas.
 
 <!-- slide -->
 #### Solución ejercicio 2
@@ -88,7 +92,9 @@ var nombre = 'Tu Nombre';
 
 ¿Te acordás que las variables se podían reasignar?
 
-Una vez que creamos una variable y la inicializamos, ya podemos empezar a usarla, también podemos cambiar su valor, es decir, reasignarla.
+Una vez que creamos una variable y la inicializamos, ya podemos empezar a usarla.
+
+También podemos cambiar su valor, es decir, reasignarla.
 
 ```javascript
 var nombreDeLaVariable = 3;
@@ -96,7 +102,9 @@ nombreDeLaVariable = 7;
 ```
 
 <!-- slide -->
-#### Ejercicio 3: reasignar la variable `nombre` que creamos
+#### Ejercicio 3
+
+Reasignar la variable `nombre` que creamos
 
 <!-- slide -->
 #### Solución ejercicio 3
@@ -109,11 +117,14 @@ var nombre = 'freeCodeCamp';
 ### Operar con variables
 
 ```javascript
+var a = 3;
 a + 2; // 3 + 2
 ```
 
 <!-- slide -->
-#### Ejercicio 4: crear la variable `unNumero`, inicializarla con el valor 1. En otra instrucción, sumarle 3 a la misma variable
+#### Ejercicio 4
+
+Crear la variable `unNumero`, inicializarla con el valor 1. En otra instrucción, sumarle 3 a la misma variable
 
 <!-- slide -->
 #### Solución ejercicio 4
@@ -147,24 +158,39 @@ const x = 1;
 
 ```javascript
 const saludo = 'Hola!';
-saludo = 'Hola Mundo!';  // TypeError
+saludo = 'Hola Mundo!';
+// => Uncaught TypeError: Assignment to constant variable
 ```
 
 <!-- slide -->
 ## Imprimir texto en la consola
 
+Podemos mostrar valores en la **consola** de JavaScript, de cualquier tipo.
+
+La consola forma parte de las *DevTools* del browser que estás usando ahora!
+
 ```javascript
+console.log('Hola Mundo!');
 console.log(nombreDeLaVariable);
 ```
 
 <!-- slide -->
-## Tipos
+#### Ejercicio 5
 
-JavaScript tiene **tipado dinámico** y **débil**: las variables se declaran sin un tipo de dato explícito, pueden modificarse, compararse y operar sin necesidad de ser convertidas previamente.  
-
-Los **valores sí tienen tipos**.
+Mostrá por consola el valor de la variable `nombre`
 
 <!-- slide -->
+#### Solución ejercicio 5
+
+```javascript
+console.log(nombre);
+```
+
+<!-- slide -->
+## Tipos de datos
+
+Hay valores de diferentes tipos: texto, números, booleanos, etc.
+
 ### Tipos principales en JS
 
 - `String`
@@ -184,10 +210,22 @@ Se escriben entre comillas simples ó dobles, **sin mezclar**.
 'JavaScript" ✗
 ```
 
-Cualquier texto entre comillas es un `String`
+Cualquier valor entre comillas es un `String`
 
 ```javascript
 '43' // Esto también es un String
+```
+
+<!-- slide -->
+#### Ejercicio 6
+
+Mostrá por consola el valor de la variable `nombre`
+
+<!-- slide -->
+#### Solución ejercicio 6
+
+```javascript
+console.log(nombre);
 ```
 
 <!-- slide -->
@@ -464,20 +502,6 @@ var y = 8;
 ```
 
 <!-- slide -->
-## Otros tipos de datos
-
-Hay 2 tipos de datos especiales que también se usan frecuentemente en JavaScript: **null** y **undefined**.
-
-<!-- slide -->
-## Null
-
-Indica explícitamente que la variable **no tiene valor**.
-
-```javascript
-var estoEsNulo = null;
-```
-
-<!-- slide -->
 ## Undefined
 
 Indica que la variable **no tiene valor definido**. Por ejemplo, si le asignamos el valor `undefined` explícitamente o sólo la declaramos, sin inicializarla.
@@ -488,42 +512,6 @@ var conValorIndefinido = undefined;
 
 ```javascript
 var variableSoloDeclarada;  // undefined
-```
-
-<!-- slide -->
-### NaN
-
-Expresa el resultado de un cálculo matemático que no puede ser representado númericamente.
-
-```javascript
-var dividirPorString = 24 / "Hola"; // NaN
-```
-
-<!-- slide -->
-## Coerción
-
-Podemos convertir los datos a otros tipos de forma *explícita* o *implícita*.  
-
-Esto último se conoce como **coerción de tipos**.
-
-<!-- slide -->
-### Conversión explícita
-
-```javascript
-var unNumero = 5;
-var unCaracter = String(unNumero);
-```
-
-<!-- slide -->
-### Conversión implícita (coerción)
-
-```javascript
-var unNumero = 5;
-/*
-en este caso, el operador + está concatenando Strings,
-luego de convertir el tipo de unNumero
-*/
-var unCaracter = unNumero + '';
 ```
 
 <!-- slide -->
@@ -798,116 +786,6 @@ imprimirTotal(10.6533);
 ```
 
 <!-- slide -->
-### Callbacks
-
-Los callbacks **no son una característica** de JavaScript.
-Son una **manera de usar las funciones**.
-
-<!-- slide -->
-### Código sincrónico
-
-Si queremos ejecutar `enviarMensaje()` debemos de esperar a que las instrucciones anteriores finalicen su operación.
-Es decir que hasta no se termine de ejecutar `descargarFoto()` no podremos ejecutar nada más.
-
-```javascript
-var foto = descargarFoto('https://google.com/logo.png');
-subirFotoTwitter(foto);
-enviarMensajeTwitter('Hey! Cuando nos juntamos?', '@leogln_');
-```
-
-<!-- slide -->
-### Código asincrónico
-
-Ahora podremos ejecutar `enviarMensajeTwitter()` mientras se descarga la foto, y que la suba a Twitter cuando esta finalice de descargar.
-
-```javascript
-descargarFoto('https://google.com/logo.png',
- function finalizoDescarga(error, png) {
-  if (error) {
-    console.log('error: ', error);
-  } else {
-    subirFotoTwitter(png);
-  }
-});
-
-enviarMensajeTwitter('Hey! Cuando nos juntamos?', '@leogln_');
-```
-
-<!-- slide -->
-## Scope
-
-Es el **ámbito o alcance de una variable**, donde esta 'vive' y desde donde puede ser accedida y modificada.
-
-<!-- slide -->
-### Según la declaración
-
-- `var` el scope está ligada a una función
-- `let` y `const` tienen alcance dentro de un bloque de código
-
-<!-- slide -->
-### Warning!
-
-En JavaScript podemos declarar variables sin usar var, let o const, **¡pero el scope pasa a ser global!**
-
-Esto significa que la variable puede ser accedida y modificada **desde cualquier parte de nuestro código**.
-
-<!-- slide -->
-### Ejemplo I
-
-```javascript
-var saludo = 'Bienvenidos! al evento';
-
-function saludar() {
-  console.log(saludo);
-}
-
-saludar(); // Bienvenidos! al evento
-
-console.log(saludo); // Bienvenidos! al evento
-```
-
-<!-- slide -->
-### Ejemplo II
-
-```javascript
-function saludar() {
-  var saludo = 'Bienvenidos! al evento';
-  console.log(saludo);
-}
-
-saludar(); // Bienvenidos! al evento
-
-console.log(saludo); // ReferenceError: saludo is not defined
-```
-
-<!-- slide -->
-### Ejemplo III
-
-```javascript
-var animales = ['Perro', 'Gato', 'Tortuga'];
-
-for (var i = 0; i < animales.length; i++) {
-  console.log('Las mascotas disponibles son: ' + animales[i]);
-}
-
-console.log(i); // 3
-```
-
-<!-- slide -->
-### Ejemplo IV
-
-```javascript
-const animales = ['Perro', 'Gato', 'Tortuga'];
-
-// Recorremos el array animales y mostramos cada uno
-for (let i = 0; i < animales.length; i++) {
-  console.log('Las mascotas disponibles son: ' + animales[i]);
-}
-
-console.log(i); // ReferenceError: i is not defined
-```
-
-<!-- slide -->
 # Para seguir aprendiendo...
 
 Algunos **recursos gratuitos** recomendados
@@ -916,4 +794,4 @@ Algunos **recursos gratuitos** recomendados
 - **[You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20%26%20going)**
 - **[Eloquent JavaScript](http://eloquentjavascript.net/)**
 - **[freeCodeCamp](https://freecodecamp.com)**
-- Documentación: [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- Documentación: **[MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
