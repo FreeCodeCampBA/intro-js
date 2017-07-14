@@ -1,18 +1,18 @@
 /*
   Ejercicio final
-  En este ejercicio vamos a crear un sistema sencillo para un VideoClub
-  Utilizando todo lo aprendido hasta ahora, strings, arreglos, funciones, etc
+  En este ejercicio vamos a crear un sistema sencillo para un Video Club
+  Utilizando todo lo aprendido hasta ahora: strings, arreglos, funciones, etc
 */
 
-// Peliculas que el VideoClub posee
-var peliculas = ['The Avengers', 'Inception', 'The Matrix', 'The Lord of the Rings'];
+// catalogoDePeliculas que el VideoClub posee
+var catalogoDePeliculas = ['The Avengers', 'Inception', 'The Matrix', 'The Lord of the Rings'];
 
 // Lógica del sistema
-function verificarStock(peliculaPedida) {
+function hayStock(peliculaPedida) {
   var peliculaEncontrada = false;
 
-  for (var i = 0; i < peliculas.length; i++) {
-    var pelicula = peliculas[i];
+  for (var i = 0; i < catalogoDePeliculas.length; i++) {
+    var pelicula = catalogoDePeliculas[i];
 
     if (peliculaPedida === pelicula) {
       peliculaEncontrada = true;
@@ -23,16 +23,16 @@ function verificarStock(peliculaPedida) {
 }
 
 function atenderCliente(peliculaPedida) {
-  if (verificarStock(peliculaPedida) === true) {
-    console.log('La película ' + peliculaPedida + ' se encuentra con stock 🤠!!');
+  if (hayStock(peliculaPedida)) {
+    console.log('La película ' + peliculaPedida + ' se encuentra en stock🤠!');
   } else {
-    console.log('La película ' + peliculaPedida + ' se encuentra sin stock 😢!!');
+    console.log('La película ' + peliculaPedida + ' se encuentra sin stock.');
   }
 }
 
 // Ejecución del sistema
 
-// 1. Peliculas pedidas por el cliente
+// 1. catalogoDePeliculas pedidas por el cliente
 var primerPeliculaPedida = 'Batman';
 var segundaPeliculaPedida = 'The Matrix';
 

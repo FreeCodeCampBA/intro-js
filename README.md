@@ -3,27 +3,54 @@
 
 ![Introducción a JS](https://i.imgur.com/v4zxLB7.png)
 
----
+<!-- slide -->
+## ![freeCodeCamp BA logo](https://i.imgur.com/b4MqE3I.png) freeCodeCamp BA
+
+- Leonardo Galante **[@leogln_](https://twitter.com/leogln_)**
+- Nicolás Quiroz **[@_nhsz](https://twitter.com/_nhsz)**
 
 <!-- slide -->
 ## ![freeCodeCamp BA logo](https://i.imgur.com/b4MqE3I.png) freeCodeCamp BA
 
-- **[freecodecampba.org](https://freecodecampba.org)**  
-- **[@freeCodeCampBA](https://twitter.com/freeCodeCampBA)**
+- **[freecodecamp.com](https://freecodecamp.com)**
+
+
+- Nuestra comunidad: **[freecodecampba.org](https://freecodecampba.org)**  
+- En Twitter: **[@freeCodeCampBA](https://twitter.com/freeCodeCampBA)**
+
+
+- **[Guía rápida para empezar](https:bit.ly/fccba-quick-start)**
+
+<!-- slide -->
+## ![freeCodeCamp BA logo](https://i.imgur.com/b4MqE3I.png) freeCodeCamp BA
+
+### Próximo Meetup: **[Domingo 23/7 en Wolox](https://www.meetup.com/es/freeCodeCampBA/events/241662741/)**
+
+- 15 a 20hs
+- Charla de Ruby On Rails
+- Inscripción: del Miércoles 19/7 al Sábado 22/7
+
+<!-- slide -->
+## Primer página web
+
+**[World Wide Web (CERN - 1990)](http://info.cern.ch/hypertext/WWW/TheProject.html)**
+
+![Primer página web](https://upload.wikimedia.org/wikipedia/commons/7/71/The_First_Website.png)
 
 <!-- slide -->
 ## ¿Qué es JavaScript?
 
-Es un lenguaje de programación creado en 1995 por [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich), para darle dinamismo e interacción a los sitios web.
+Es un **lenguaje de programación** creado en 1995 por [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich), para darle dinamismo e interacción a los [sitios web](http://www.webdesign-inspiration.com/).
 
 Hoy es un **lenguaje de propósito general**.
 
 <!-- slide -->
 ## ¿Por qué JavaScript?
 
-Es el lenguaje que entienden y ejecutan los navegadores (browsers).  
-
-Desde hace algunos años, podemos ejecutar código JavaScript fuera del browser, con **NodeJS**.
+- Es el lenguaje que entienden y ejecutan los navegadores (browsers).  
+- Es más fácil de aprender que otros lenguajes. Podemos empezar a hacer cosas antes.
+- **Hay mucha demanda de desarrolladores JavaScript**.
+- Desde hace algunos años, podemos ejecutar código JavaScript fuera del browser, con **NodeJS**.
 
 <!-- slide -->
 ## Variables
@@ -43,7 +70,7 @@ Declarar es **crear una nueva variable**.
 
 Usamos la palabra `var` para crear nuevas variables.
 
-```javascript
+```js
 var nombreDeLaVariable;
 ```
 
@@ -62,7 +89,7 @@ Declarar la variable `nombre`
 <!-- slide -->
 #### Solución ejercicio 1
 
-```javascript
+```js
 var nombre;
 ```
 
@@ -71,7 +98,7 @@ var nombre;
 
 Inicializar una variable consiste en crearla (declararla) y asignarle un valor inicial.
 
-```javascript
+```js
 var nombreDeLaVariable = 3;
 ```
 
@@ -83,7 +110,7 @@ Declarar la variable `nombre` e inicializarla con tu nombre, escrito entre comil
 <!-- slide -->
 #### Solución ejercicio 2
 
-```javascript
+```js
 var nombre = 'Nicolás';
 ```
 
@@ -96,8 +123,11 @@ Una vez que creamos una variable y la inicializamos, ya podemos empezar a usarla
 
 También podemos cambiar su valor, es decir, reasignarla.
 
-```javascript
+```js
+//Declaro e inicializo la variable
 var nombreDeLaVariable = 3;
+
+// Le cambio el valor (la reasigno)
 nombreDeLaVariable = 7;
 ```
 
@@ -109,28 +139,31 @@ Reasignar la variable `nombre` que creamos
 <!-- slide -->
 #### Solución ejercicio 3
 
-```javascript
+```js
 var nombre = 'freeCodeCamp';
 ```
 
 <!-- slide -->
 ### Operar con variables
 
-```javascript
-var a = 3;
-a + 2; // 3 + 2
+```js
+var unNumeroCualquiera = 3;
+
+// Equivale a hacer 3 + 2
+unNumeroCualquiera + 2;
 ```
 
 <!-- slide -->
 #### Ejercicio 4
 
 Crear la variable `unNumero`, inicializarla con el valor 1.
- En otra instrucción, sumarle 3 a la misma variable.
+
+En otra instrucción, sumarle 3 a la misma variable.
 
 <!-- slide -->
 #### Solución ejercicio 4
 
-```javascript
+```js
 var unNumero = 1;
 unNumero + 3;
 ```
@@ -146,18 +179,18 @@ unNumero + 3;
 <!-- slide -->
 ## Constantes
 
-Espacios con nombre para guardar **valores** (cajas con etiquetas, como las variables) que no varían.
+Son espacios con nombre para guardar **valores** (cajas con etiquetas, como las variables) que no varían.
 
 Son **reutilizables**, pero **no se pueden reasignar**.
 
-```javascript
+```js
 const numeroEntero = 1;
 ```
 
 <!-- slide -->
 ### Si reasignamos una constante, obtenemos un error
 
-```javascript
+```js
 const saludo = 'Hola!';
 saludo = 'Hola Mundo!';
 // => Uncaught TypeError: Assignment to constant variable
@@ -168,9 +201,9 @@ saludo = 'Hola Mundo!';
 
 Podemos mostrar valores de cualquier tipo en la **consola** del navegador.
 
-La consola forma parte de las *DevTools* del browser que estás usando ahora!
+La consola forma parte de las *herramientas de desarrollo* del navegador que estás usando ahora!
 
-```javascript
+```js
 console.log('Hola Mundo!');
 console.log(nombreDeLaVariable);
 ```
@@ -178,12 +211,12 @@ console.log(nombreDeLaVariable);
 <!-- slide -->
 #### Ejercicio 5
 
-Mostrá por consola el valor de la variable `nombre`
+Mostrar por consola el valor de la variable `nombre`
 
 <!-- slide -->
 #### Solución ejercicio 5
 
-```javascript
+```js
 console.log(nombre);
 ```
 
@@ -205,15 +238,15 @@ Representan **cadenas de caracteres** (texto).
 
 Se escriben entre comillas simples ó dobles, **sin mezclar**.
 
-```javascript
+```js
 'JavaScript' // OK ✔
 "JavaScript" // OK ✔
 // 'JavaScript" ✗
 ```
 
-Cualquier valor entre comillas es un `String`
+Cualquier valor entre comillas es un `String`, por ejemplo, un número.
 
-```javascript
+```js
 '43' // Esto también es un String
 ```
 
@@ -222,26 +255,27 @@ Cualquier valor entre comillas es un `String`
 
 #### Longitud de la cadena
 
-```javascript
-var titulo = "You Don't Know JavaScript";
-titulo.length;  // 25
+```js
+var titulo = "¡Estoy aprendiendo a programar!";
+titulo.length;  // 31
 ```
 
-```javascript
-'titulo'.length;  // 5
+```js
+'titulo'.length;  // 6
 ```
 
 <!-- slide -->
 #### Ejercicio 6
-Declara una variable `evento` y asignale `'Programá Tu Futuro'`
-Averiguá cuál es la longitud de la variable definida
+Declarar una variable `evento` y asignale `'Programá Tu Futuro'`.
+
+Averiguar cuál es la longitud de la variable definida.
 
 <!-- slide -->
 #### Solución ejercicio 6
 
-```javascript
+```js
 var evento = 'Programá Tu Futuro';
-evento.length;
+evento.length; // 18
 ```
 
 <!-- slide -->
@@ -251,7 +285,7 @@ evento.length;
 
 Se usa para combinar diferentes cadenas de caracteres.
 
-```javascript
+```js
 var lenguaje = 'JavaScript';
 var año = 1995;
 var unaFrase = lenguaje + ' apareció en ' + año;
@@ -260,34 +294,35 @@ var unaFrase = lenguaje + ' apareció en ' + año;
 
 <!-- slide -->
 #### Ejercicio 7
-Declara una variable `tema` y asignale `Kids`
-Declara otra variable `artista` y asignale `MGMT`
-Una vez que tengas las 2 variables declaradas, concatenalas para formar
-la siguiente oración: `Ahora suena Kids de MGMT`
+
+Declarar una variable `tema` y asignale `Kids`
+Declarar otra variable `artista` y asignale `MGMT`
+Teniendo las 2 variables declaradas, concatenarlas para formar
+el siguiente estado: `Ahora suena: Kids de MGMT`
 
 <!-- slide -->
 #### Solución ejercicio 7
 
-```javascript
+```js
 var tema = 'Kids';
 var artista = 'MGMT';
-var oracion = 'Ahora suena ' + tema + ' de ' + artista;
+var estado = 'Ahora suena: ' + tema + ' de ' + artista;
 ```
 
 <!-- slide -->
 ## Number
 
-JavaScript no hace diferencia entre números enteros y de punto flotante.
+JavaScript no hace diferencia entre números enteros y de punto flotante (decimales).
 
-```javascript
+```js
 var unEntero = 27;
 ```
 
-```javascript
+```js
 var unNumeroDePuntoFlotante = 2.5;
 ```
 
-```javascript
+```js
 var unEnteroNegativo = -10;
 ```
 
@@ -296,14 +331,14 @@ var unEnteroNegativo = -10;
 
 #### Suma: `x + y`
 
-```javascript
+```js
 10 + 91;  // 101
 1 + 3.14;  // 4.14
 ```
 
 #### Resta: `x - y`
 
-```javascript
+```js
 27 - 4  // 23
 3 - 5  // -2
 3 - 1.5  // 1.5
@@ -311,15 +346,15 @@ var unEnteroNegativo = -10;
 
 <!-- slide -->
 #### Ejercicio 8
-Cuantos días faltan para el **último día** del mes ?
+¿Cuantos días faltan para el **último día** del mes?
 
 <!-- slide -->
 #### Solución ejercicio 8
 
-```javascript
+```js
 var diaFinDeMes = 31;
-var diaActual = 27;
-var diasRestantes = diaFinDeMes - diaActual; // 4
+var diaActual = 15;
+var diasRestantes = diaFinDeMes - diaActual; // 16
 ```
 
 <!-- slide -->
@@ -327,14 +362,14 @@ var diasRestantes = diaFinDeMes - diaActual; // 4
 
 #### Multiplicación: `x * y`
 
-```javascript
+```js
 7 * 3  // 21
 4 * 12.5  // 50
 ```
 
 #### División: `x / y`
 
-```javascript
+```js
 1 / 2  // 0.5
 8 / 2  // 4
 1.0 / 3.0  // 0.3333333333333333
@@ -342,17 +377,17 @@ var diasRestantes = diaFinDeMes - diaActual; // 4
 
 <!-- slide -->
 #### Incremento
-Se puede escribir de diversas formas: `x = x + 1`, `x += 1`, `++x`, `x++`
+Se puede escribir de muchas formas: `x = x + 1`, `x += 1`, `++x`, `x++`
 
-```javascript
+```js
 var x = 5;
 x += 1;  // 6;
 ```
 
 #### Decremento
-Se puede escribir de diversas formas: `x = x - 1`, `x -= 1`, `--x`, `x--`
+Se puede escribir de muchas formas: `x = x - 1`, `x -= 1`, `--x`, `x--`
 
-```javascript
+```js
 var x = 5;
 x -= 1;  // 4;
 ```
@@ -362,7 +397,7 @@ x -= 1;  // 4;
 
 Es el resto de dividir `x` por `y`.
 
-```javascript
+```js
 10 % 2  // 0
 11 % 2  // 1
 ```
@@ -370,9 +405,9 @@ Es el resto de dividir `x` por `y`.
 <!-- slide -->
 ## Boolean
 
-Tiene 2 valores posibles: **true** y **false**, para indicar si algo es verdadero o falso.
+Tiene 2 valores posibles: **true** y **false**, para indicar si algo es **verdadero** ó **falso**.
 
-```javascript
+```js
 2 > 1  // true
 1 > 2  // false
 'hola' === 'Hola'  // false
@@ -387,7 +422,7 @@ Verificar si tu edad es mayor a 18
 <!-- slide -->
 #### Solución ejercicio 9
 
-```javascript
+```js
 var edad = 24;
 edad > 18 // true
 ```
@@ -399,12 +434,12 @@ Es cualquier expresión que pueda evaluarse como verdadera ó falsa y por lo tan
 
 <!-- slide -->
 #### Ejercicio 10
-Cómo podría verificar si el día de hoy es par?
+¿Cómo podemos verificar si el día de hoy es par?
 
 <!-- slide -->
 #### Solución ejercicio 10
 
-```javascript
+```js
 diaActual % 2 === 0 // false
 ```
 
@@ -415,7 +450,7 @@ diaActual % 2 === 0 // false
 
 Compara **sólo el valor**
 
-```javascript
+```js
 1 == 1  // true
 1 == '1'  // true
 ```
@@ -425,7 +460,7 @@ Compara **sólo el valor**
 
 Compara el **valor y tipo del mismo**
 
-```javascript
+```js
 1 === 1  // true
 1 === '1'  // false
 ```
@@ -436,13 +471,13 @@ Son análogos a la igualdad.
 
 ### Desigualdad `!=`
 
-```javascript
+```js
 23 != '23'  // false
 ```
 
 ### Desigualdad estricta `!==`
 
-```javascript
+```js
 23 !== '23'  // true
 ```
 
@@ -451,32 +486,32 @@ Son análogos a la igualdad.
 
 #### Menor `<`
 
-```javascript
+```js
 1 < 2  // true
 ```
 
 También podemos comparar caracteres, según su orden en la tabla ASCII.
 
-```javascript
+```js
 'a' < 'b'  // true
 ```
 
 #### Mayor `>`
 
-```javascript
+```js
 77.5 > 80  // false
 ```
 
 <!-- slide -->
 #### Menor ó igual `<=`
 
-```javascript
+```js
 10 <= 10  // true
 ```
 
 #### Mayor ó igual `>=`
 
-```javascript
+```js
 31 >= 33  // false
 ```
 
@@ -484,25 +519,26 @@ También podemos comparar caracteres, según su orden en la tabla ASCII.
 ## Operadores lógicos
 
 Se utilizan para evaluar **valores y expresiones booleanas**.
+
 Retornan un valor booleano.
 
 <!-- slide -->
 ### AND `&&`
 
-Retorna `true` **si y sólo si todas las expresiones evaluadas son verdaderas**. Caso contrario, retorna `false`.
+Retorna `true` **si y sólo si todas las expresiones evaluadas son verdaderas**. Sino, retorna `false`.
 
-```javascript
+```js
 true && true  // true
 ```
 
 <!-- slide -->
 #### Ejercicio 11
-Es tu edad mayor a 18 y **a la vez** menor a 26?
+Es tu edad mayor a 18 **y, al mismo tiempo,** menor a 26?
 
 <!-- slide -->
 #### Solución ejercicio 11
 
-```javascript
+```js
 var edad = 24;
 edad > 18 && edad < 26; // true
 ```
@@ -512,15 +548,15 @@ edad > 18 && edad < 26; // true
 
 Retorna `true` si **al menos una de las expresiones es verdadera**; sino, retorna `false`.
 
-```javascript
+```js
 true || true  // true
 ```
 
-```javascript
+```js
 true || false  // true
 ```
 
-```javascript
+```js
 false || false  // false
 ```
 
@@ -529,20 +565,20 @@ false || false  // false
 
 **Negación**. Retorna `false` si la expresión es verdadera; sino, retorna `true`.
 
-```javascript
+```js
 // En este caso poner !(true) o bien !true es lo mismo
 !(true)  // false
 ```
 
-```javascript
-!(2 > 1)  // false
+```js
+!(2 > 1)  // false, porque 2 > 1 es true
 ```
 
-```javascript
+```js
 !(/* expresión booleana verdadera */)  // false
 ```
 
-```javascript
+```js
 !(/* expresión booleana falsa */)  // true
 ```
 
@@ -551,7 +587,7 @@ false || false  // false
 
 ¿Cuál es el resultado final, `true` ó `false`?
 
-```javascript
+```js
 var x = 10;
 var y = 'a';
 
@@ -563,7 +599,7 @@ y === 'b' || x >= 10;
 
 ¿Cuál es el resultado final, `true` ó `false`?
 
-```javascript
+```js
 var x = 3;
 var y = 8;
 
@@ -575,11 +611,11 @@ var y = 8;
 
 Indica que la variable **no tiene valor definido**. Esto pasa cuando le asignamos el valor `undefined` explícitamente o sólo la declaramos, sin inicializarla.
 
-```javascript
+```js
 var conValorIndefinido = undefined;
 ```
 
-```javascript
+```js
 var variableSoloDeclarada;  // undefined
 ```
 
@@ -588,13 +624,13 @@ var variableSoloDeclarada;  // undefined
 
 ### 1 sola línea
 
-```javascript
+```js
 // Esto es un comentario simple
 ```
 
 ### Multilínea
 
-```javascript
+```js
 /*
   Los que se enamoran de la práctica sin la teoría
   son como los pilotos sin timón ni brújula,
@@ -607,17 +643,19 @@ var variableSoloDeclarada;  // undefined
 <!-- slide -->
 ## Arrays
 
-Un `array` es una **lista de valores de cualquier tipo**.
+Un `array` es una **lista de valores**.
 
-```javascript
+```js
 var unArregloVacio = [];
 ```
 
-```javascript
+```js
 var unArregloDeNumeros = [1, 2, 3];
 ```
 
-```javascript
+En JavaScript, podemos armar listas de **valores de cualquier tipo**.
+
+```js
 var unArregloDeCosas = [3.7, 2, 'JavaScript', [48, 7]];
 ```
 
@@ -629,21 +667,22 @@ Definí un **array** con el nombre de tus 3 mejores amigos
 <!-- slide -->
 #### Solución ejercicio 14
 
-```javascript
-var mejoresAmigos = ['Matias', 'Nicolas', 'Mauricio'];
+```js
+var mejoresAmigos = ['Matías', 'Nicolás', 'Mauricio'];
 ```
+
 <!-- slide -->
 ### Para acceder a un elemento usamos índices
 
 Primer elemento del array: `[0]`
 
-```javascript
+```js
 unArregloDeNumeros[0];  // 1
 ```
 
 Último elemento del array: `[longitud del arreglo - 1]`
 
-```javascript
+```js
 var ultimaPosicion = unArregloDeNumeros.length - 1;
 unArregloDeNumeros[ultimaPosicion];  // 3
 ```
@@ -653,47 +692,49 @@ unArregloDeNumeros[ultimaPosicion];  // 3
 <!-- slide -->
 ### Ejercicio 15
 
-Definí un **array** `mejoresAmigos` con los nombres de tus 3 mejores amigos
-Mostrá por consola el último amigo dentro del array
+Definir un **array** `mejoresAmigos` con los nombres de tus 3 mejores amigos.
+
+Mostrar por consola el último amigo dentro del array.
 
 <!-- slide -->
 #### Solución ejercicio 15
 
-```javascript
+```js
 var mejoresAmigos = ['Matias', 'Nicolas', 'Mauricio'];
 console.log(mejoresAmigos[2]);
 ```
+
 <!-- slide -->
 ### Modificar un `Array`
 
 #### Reasignar valores
 
-```javascript
+```js
 var unArregloDeNumeros = [19, 8, 3];
 unArregloDeNumeros[1] = 23;  // [19, 23, 3];
 ```
 
 #### Agregar al final
 
-```javascript
+```js
 unArregloDeNumeros.push('FCC');  // [19, 23, 3, 'FCC'];
 ```
 
 #### Sacar el último elemento
 
-```javascript
+```js
 unArregloDeNumeros.pop();  // 'FCC';
 ```
 
 <!-- slide -->
 ### Ejercicio 16
 
-A tu array de `mejoresAmigos` agregale un amigo más
+Agregale un amigo más a tu array de `mejoresAmigos`.
 
 <!-- slide -->
 #### Solución ejercicio 16
 
-```javascript
+```js
 mejoresAmigos.push('Camilo');
 console.log(mejoresAmigos);
 ```
@@ -705,20 +746,20 @@ También **podemos acceder a los caracteres de un `String`** usando índices (co
 
 Si quisiéramos hacerlo, tendríamos que convertirlo primero a `Array`, operar y luego pasarlo a `String` nuevamente.
 
-```javascript
+```js
 var unString = 'Puedo acceder a los caracteres de este texto, pero no modificarlo';
 ```
 
 #### Acceder a un caracter de un `String`
 
-```javascript
+```js
 console.log(unString[2]);  // e
 ```
 
 <!-- slide -->
 ### Convierto el `String` a `Array`
 
-```javascript
+```js
 console.log(unString.split(' '));
 /*
 [
@@ -742,27 +783,24 @@ console.log(unString.split(' '));
 
 Nos permiten decidir **qué camino seguir**, según las condiciones que evaluemos.
 
-```javascript
+```js
 if (condición booleana) {
-  // se ejecuta si la condición es verdadera
+  // Se ejecuta si la condición se cumple
 } else {
-  // se ejecuta si la condición es falsa
+  // Se ejecuta si la condición no se cumple
 }
 ```
 
 <!-- slide -->
 ### Ejemplo
 
-```javascript
+```js
 var edad = 16;
-/*
-solo las personas que sean mayores a 18 años
-pueden entrar al boliche
-*/
+// Solo las personas mayores de 18 años pueden entrar al boliche
 if (edad > 18) {
-  console.log('Puede entrar al boliche');
+  console.log('Puede entrar al boliche.');
 } else {
-  console.log('No puede entrar al boliche');
+  console.log('No puede entrar al boliche.');
 }
 ```
 
@@ -781,7 +819,7 @@ Son aquellos valores que se interpretan como *falsos* **si se evalúan en el con
 <!-- slide -->
 ### Valores verdaderos (truthy values)
 
-**Todos los valores que no se encuentren en la lista anterior** (falsy values), son *verdaderos*.
+**Todos los valores que no se encuentren en la lista anterior**, se consideran *verdaderos*.
 
 <!-- slide -->
 ## Ciclos
@@ -795,34 +833,34 @@ También iterar hasta que ciertas **condiciones se cumplan o no**
 
 Se ejecuta hasta que la **condición booleana sea falsa**.
 
-```javascript
+```js
 var i = 0;
-
+// Iteración N° 0 hasta Iteración N° 4
 while (i < 5) {
   console.log('Iteración N° ' + i);
   i++;
-} // Iteración N° 0 hasta Iteración N° 4
+}
 ```
 
 <!-- slide -->
 ### For
 
-Se ejecuta hasta que la **condición booleana sea falsa** y consiste en tres expresiones **opcionales**
+Se ejecuta hasta que la **condición booleana sea falsa** y consiste en tres expresiones **opcionales**.
 
-```javascript
+```js
 for (expresión inicial; condición; expresión final) {
   ...
 };
 ```
 
-* `expresión inicial:` declaramos una variable como contador
-* `condición:` expresión evaluada antes de cada iteración
-* `expresión final:` expresión evaluada al final de cada iteración
+* `expresión inicial:` declaramos una variable como contador.
+* `condición:` expresión evaluada antes de cada iteración.
+* `expresión final:` expresión evaluada al final de cada iteración.
 
 <!-- slide -->
 #### Ejemplo I
 
-```javascript
+```js
 for (var i = 0; i < 10; i++) {
   console.log('Iteración N° ' + i);
 }
@@ -831,7 +869,7 @@ for (var i = 0; i < 10; i++) {
 <!-- slide -->
 #### Ejemplo II
 
-```javascript
+```js
 var animales = ['Perro', 'Gato', 'Tortuga'];
 
 // Recorremos el array animales y mostramos cada uno
@@ -843,13 +881,14 @@ for (var i = 0; i < animales.length; i++) {
 <!-- slide -->
 ### Ejercicio 17
 
-Definí un array `planetas` con los siguientes valores: 'Jupiter', 'Saturno' y 'Urano'
-Recorre el array y mostralos por consola
+Definir un array `planetas` con los siguientes valores: 'Jupiter', 'Saturno' y 'Urano'.
+
+Recorrer el array y mostrarlos por consola.
 
 <!-- slide -->
 #### Solución ejercicio 17
 
-```javascript
+```js
 var planetas = ['Jupiter', 'Saturno', 'Urano'];
 
 for (var i = 0; i < planetas.length; i++) {
@@ -862,9 +901,10 @@ for (var i = 0; i < planetas.length; i++) {
 ## Funciones
 
 Son **bloques de código** con nombre, **reutilizables**.
+
 Pueden recibir (o no) **parámetros**.
 
-```javascript
+```js
 function nombreFuncion(primerParametro, segundoParametro) {
   ...
 }
@@ -873,8 +913,8 @@ function nombreFuncion(primerParametro, segundoParametro) {
 <!-- slide -->
 ### Ejemplo I
 
-```javascript
-// devuelve la suma entre a y b
+```js
+// Devuelve la suma entre a y b
 function sumarDosValores(a, b) {
   return a + b;
 }
@@ -885,8 +925,8 @@ sumarDosValores(2, 4);
 <!-- slide -->
 ### Ejemplo II
 
-```javascript
-// devuelve el total con solo 2 decimales
+```js
+// Devuelve el total con solo 2 decimales
 function imprimirTotal(total) {
   return total.toFixed(2);
 }
@@ -902,7 +942,7 @@ Definir una función que multiplique 2 valores que serán pasados por parámetro
 <!-- slide -->
 #### Solución ejercicio 18
 
-```javascript
+```js
 function multiplicar(primerValor, segundoValor) {
   return primerValor * segundoValor;
 }
@@ -911,22 +951,41 @@ function multiplicar(primerValor, segundoValor) {
 <!-- slide -->
 ### Ejercicio Final
 
-En este ejercicio vamos a crear un sistema sencillo para un **Video Club**
-Utilizando todo lo aprendido hasta ahora, strings, arreglos, funciones, etc...
-Vamos a escribir una función que verifique si las películas que quiere el cliente se encuentran o no en stock.
+En este ejercicio vamos a crear un sistema sencillo para un **Video Club**, utilizando todo lo aprendido hasta ahora: strings, arreglos, funciones, etc...
+
+Vamos a escribir una **función que verifique si las películas que quiere el cliente se encuentran o no en stock**.
 
 1. Debe contar con una lista con las siguientes películas:
 'The Avengers', 'Inception', 'The Matrix', 'The Lord of the Rings'
-2. El cliente pide 2 películas una que se encuentra en stock y otra que no
-3. Debe de verificar si la pedida por el cliente se encuentre entre una de ellas
-4. Debería de mostrar un mensaje tanto la película se encuentra en stock como sino se encuentra en stock
+2. El cliente pide 2 películas, una que se encuentra en stock y otra que no.
+3. Debe de verificar si la pedida por el cliente se encuentre entre una de ellas.
+4. Debe mostrar un mensaje tanto si la película se encuentra en stock como sino.
+
+<!-- slide -->
+## Si tenés dudas para resolver el ejercicio...
+
+- Escribinos en el [chat](https://freecodecampba.org)
+- Escribinos un mail: freecodecampba@gmail.com
+- Preguntanos por [Facebook](https://www.facebook.com/groups/free.code.camp.buenos.aires/), [Twitter](https://twitter.com/freeCodeCampBA), etc
+
+<!-- slide -->
+## Si querés ver una solución posible... ¡Pero después de haber intentado!
+
+- [Solución](https://github.com/FreeCodeCampBA/intro-js/blob/master/ejercicioFinal.js)
 
 <!-- slide -->
 # Para seguir aprendiendo...
 
-Algunos **recursos gratuitos** recomendados
+Algunos **recursos gratuitos** recomendados:
 
+### En español
 - **[JavaScript para Gatos](https://jsparagatos.com/)**
+- **[JavaScript101](https://github.com/javascript-101/javascript-101)**
+  - En Twitter: [@javascript_101](https://twitter.com/javascript_101)
+  - Próximo evento: [Sábado 22/7](https://www.eventbrite.com.ar/e/javascript-101-vol4-tickets-36080812682)
+- Vengan a [nuestros Meetups](https://meetup.com/freecodecampba)!
+
+### En inglés
 - **[You Don't Know JS: Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20%26%20going)**
 - **[Eloquent JavaScript](http://eloquentjavascript.net/)**
 - **[freeCodeCamp](https://freecodecamp.com)**
