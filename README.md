@@ -28,10 +28,10 @@
 
 - 15 a 20hs
 - Charla de Ruby On Rails
-- Inscripción: del Miércoles 19/7 al Sábado 22/7
+- **Inscripción:** del Miércoles 19/7 al Sábado 22/7
 
 <!-- slide -->
-## Primer página web
+## Esta fue la primer página web
 
 **[World Wide Web (CERN - 1990)](http://info.cern.ch/hypertext/WWW/TheProject.html)**
 
@@ -48,9 +48,9 @@ Hoy es un **lenguaje de propósito general**.
 ## ¿Por qué JavaScript?
 
 - Es el lenguaje que entienden y ejecutan los navegadores (browsers).  
-- Es más fácil de aprender que otros lenguajes. Podemos empezar a hacer cosas antes.
+- Es **relativamente fácil de aprender**, por lo que es una buena opción como primer lenguaje.
 - **Hay mucha demanda de desarrolladores JavaScript**.
-- Desde hace algunos años, podemos ejecutar código JavaScript fuera del browser, con **NodeJS**.
+- Ahora también podemos ejecutar código JavaScript fuera del browser, usando **NodeJS**.
 
 <!-- slide -->
 ## Variables
@@ -61,7 +61,7 @@ Es una caja para guardar **valores**, de diferentes tipos. Esta caja tiene una e
 
 Son **reutilizables**: una vez creadas, podemos usarlas todas las veces que querramos.
 
-Se pueden **reasignar**: cambiamos su valor. Por esto se llaman variables.
+Se pueden **reasignar**, cambiar su valor. Por eso se llaman variables.
 
 <!-- slide -->
 ### Declarar una variable
@@ -77,14 +77,14 @@ var nombreDeLaVariable;
 **Nota**: las sentencias en JS terminan con `;`
 
 <!-- slide -->
-## Importante: probá el código en tu consola!
+## Importante: ¡probá todo el código en tu consola!
 
 ![Chrome's console](https://i.imgur.com/1UWTlwor.png)
 
 <!-- slide -->
 #### Ejercicio 1
 
-Declarar la variable `nombre`
+Declarar la variable `nombre`.
 
 <!-- slide -->
 #### Solución ejercicio 1
@@ -134,7 +134,7 @@ nombreDeLaVariable = 7;
 <!-- slide -->
 #### Ejercicio 3
 
-Reasignar la variable `nombre` que creamos
+Reasignar la variable `nombre` que creamos.
 
 <!-- slide -->
 #### Solución ejercicio 3
@@ -147,10 +147,11 @@ var nombre = 'freeCodeCamp';
 ### Operar con variables
 
 ```js
-var unNumeroCualquiera = 3;
+var tres = 3;
 
 // Equivale a hacer 3 + 2
-unNumeroCualquiera + 2;
+tres + 2;
+// => 5
 ```
 
 <!-- slide -->
@@ -166,20 +167,21 @@ En otra instrucción, sumarle 3 a la misma variable.
 ```js
 var unNumero = 1;
 unNumero + 3;
+// => 4
 ```
 
 <!-- slide -->
 ## Cómo nombrar variables
 
-- Usar **nombres significativos**, que representen el contenido
-- El nombre puede empezar con cualquier letra, $ ó _
+- Usar **nombres descriptivos**, que representen el contenido
+- El nombre puede empezar con cualquier letra, `$` ó `_`, no con números
 - Por convención se utiliza **camelCase**
 - El lenguaje es **case sensitive**, es decir hay distinción entre mayúsculas y minúsculas
 
 <!-- slide -->
 ## Constantes
 
-Son espacios con nombre para guardar **valores** (cajas con etiquetas, como las variables) que no varían.
+Son espacios con nombre para guardar **valores** (también son cajas con etiquetas, como las variables) que no varían.
 
 Son **reutilizables**, pero **no se pueden reasignar**.
 
@@ -201,7 +203,7 @@ saludo = 'Hola Mundo!';
 
 Podemos mostrar valores de cualquier tipo en la **consola** del navegador.
 
-La consola forma parte de las *herramientas de desarrollo* del navegador que estás usando ahora!
+¡La consola forma parte de las *herramientas de desarrollo* del navegador que estás usando ahora!
 
 ```js
 console.log('Hola Mundo!');
@@ -211,7 +213,7 @@ console.log(nombreDeLaVariable);
 <!-- slide -->
 #### Ejercicio 5
 
-Mostrar por consola el valor de la variable `nombre`
+Mostrar por consola el valor de la variable `nombre`.
 
 <!-- slide -->
 #### Solución ejercicio 5
@@ -227,9 +229,9 @@ Podemos usar valores de diferentes tipos en JavaScript.
 
 ### Tipos principales en JS
 
-- `String` - Cadena de caracteres
-- `Number`  - Números
-- `Boolean` - Booleanos
+- `String` (Cadena de caracteres)
+- `Number`  (Números)
+- `Boolean` (Booleanos)
 
 <!-- slide -->
 ## String
@@ -239,9 +241,9 @@ Representan **cadenas de caracteres** (texto).
 Se escriben entre comillas simples ó dobles, **sin mezclar**.
 
 ```js
-'JavaScript' // OK ✔
-"JavaScript" // OK ✔
-// 'JavaScript" ✗
+'JavaScript' // ✔
+"JavaScript" // ✔
+// 'JavaScript" ✗ Nope
 ```
 
 Cualquier valor entre comillas es un `String`, por ejemplo, un número.
@@ -266,7 +268,7 @@ titulo.length;  // 31
 
 <!-- slide -->
 #### Ejercicio 6
-Declarar una variable `evento` y asignale `'Programá Tu Futuro'`.
+Declarar una variable `evento` y asignarle `'Programá Tu Futuro'`.
 
 Averiguar cuál es la longitud de la variable definida.
 
@@ -295,10 +297,12 @@ var unaFrase = lenguaje + ' apareció en ' + año;
 <!-- slide -->
 #### Ejercicio 7
 
-Declarar una variable `tema` y asignale `Kids`
-Declarar otra variable `artista` y asignale `MGMT`
+Declarar una variable `tema` y asignale `Kids`.
+
+Declarar otra variable `artista` y asignale `MGMT`.
+
 Teniendo las 2 variables declaradas, concatenarlas para formar
-el siguiente estado: `Ahora suena: Kids de MGMT`
+el siguiente estado: `Ahora suena: Kids de MGMT`.
 
 <!-- slide -->
 #### Solución ejercicio 7
@@ -332,16 +336,21 @@ var unEnteroNegativo = -10;
 #### Suma: `x + y`
 
 ```js
-10 + 91;  // 101
-1 + 3.14;  // 4.14
+10 + 91;
+// => 101
+1 + 3.14;
+// => 4.14
 ```
 
 #### Resta: `x - y`
 
 ```js
-27 - 4  // 23
-3 - 5  // -2
-3 - 1.5  // 1.5
+27 - 4
+// => 23
+3 - 5
+// => -2
+3 - 1.5
+// => 1.5
 ```
 
 <!-- slide -->
@@ -354,7 +363,8 @@ var unEnteroNegativo = -10;
 ```js
 var diaFinDeMes = 31;
 var diaActual = 15;
-var diasRestantes = diaFinDeMes - diaActual; // 16
+var diasRestantes = diaFinDeMes - diaActual;
+// => 16
 ```
 
 <!-- slide -->
@@ -363,16 +373,21 @@ var diasRestantes = diaFinDeMes - diaActual; // 16
 #### Multiplicación: `x * y`
 
 ```js
-7 * 3  // 21
-4 * 12.5  // 50
+7 * 3
+// => 21
+4 * 12.5
+// => 50
 ```
 
 #### División: `x / y`
 
 ```js
-1 / 2  // 0.5
-8 / 2  // 4
-1.0 / 3.0  // 0.3333333333333333
+1 / 2
+// => 0.5
+8 / 2
+// => 4
+1.0 / 3.0
+// => 0.3333333333333333
 ```
 
 <!-- slide -->
@@ -381,7 +396,8 @@ Se puede escribir de muchas formas: `x = x + 1`, `x += 1`, `++x`, `x++`
 
 ```js
 var x = 5;
-x += 1;  // 6;
+x += 1;
+// => 6
 ```
 
 #### Decremento
@@ -389,7 +405,8 @@ Se puede escribir de muchas formas: `x = x - 1`, `x -= 1`, `--x`, `x--`
 
 ```js
 var x = 5;
-x -= 1;  // 4;
+x -= 1;
+// => 4
 ```
 
 <!-- slide -->
@@ -398,8 +415,10 @@ x -= 1;  // 4;
 Es el resto de dividir `x` por `y`.
 
 ```js
-10 % 2  // 0
-11 % 2  // 1
+10 % 2
+// => 0
+11 % 2
+// => 1
 ```
 
 <!-- slide -->
@@ -408,9 +427,12 @@ Es el resto de dividir `x` por `y`.
 Tiene 2 valores posibles: **true** y **false**, para indicar si algo es **verdadero** ó **falso**.
 
 ```js
-2 > 1  // true
-1 > 2  // false
-'hola' === 'Hola'  // false
+2 > 1
+// => true
+1 > 2
+// => false
+'hola' === 'Hola'
+// => false
 ```
 
 **Nota:** al comparar valores, usar siempre `===`
@@ -424,7 +446,8 @@ Verificar si tu edad es mayor a 18
 
 ```js
 var edad = 24;
-edad > 18 // true
+edad > 18
+// => true
 ```
 
 <!-- slide -->
@@ -440,7 +463,8 @@ Es cualquier expresión que pueda evaluarse como verdadera ó falsa y por lo tan
 #### Solución ejercicio 10
 
 ```js
-diaActual % 2 === 0 // false
+diaActual % 2 === 0
+// => false
 ```
 
 <!-- slide -->
@@ -451,8 +475,10 @@ diaActual % 2 === 0 // false
 Compara **sólo el valor**
 
 ```js
-1 == 1  // true
-1 == '1'  // true
+1 == 1
+// => true
+1 == '1'
+// => true
 ```
 
 <!-- slide -->
@@ -461,8 +487,10 @@ Compara **sólo el valor**
 Compara el **valor y tipo del mismo**
 
 ```js
-1 === 1  // true
-1 === '1'  // false
+1 === 1
+// => true
+1 === '1'
+// => false
 ```
 
 <!-- slide -->
@@ -472,13 +500,15 @@ Son análogos a la igualdad.
 ### Desigualdad `!=`
 
 ```js
-23 != '23'  // false
+23 != '23'
+// => false
 ```
 
 ### Desigualdad estricta `!==`
 
 ```js
-23 !== '23'  // true
+23 !== '23'
+// => true
 ```
 
 <!-- slide -->
@@ -487,32 +517,37 @@ Son análogos a la igualdad.
 #### Menor `<`
 
 ```js
-1 < 2  // true
+1 < 2
+// => true
 ```
 
 También podemos comparar caracteres, según su orden en la tabla ASCII.
 
 ```js
-'a' < 'b'  // true
+'a' < 'b'
+// => true
 ```
 
 #### Mayor `>`
 
 ```js
-77.5 > 80  // false
+77.5 > 80
+// => false
 ```
 
 <!-- slide -->
 #### Menor ó igual `<=`
 
 ```js
-10 <= 10  // true
+10 <= 10
+// => true
 ```
 
 #### Mayor ó igual `>=`
 
 ```js
-31 >= 33  // false
+31 >= 33
+// => false
 ```
 
 <!-- slide -->
@@ -528,7 +563,8 @@ Retornan un valor booleano.
 Retorna `true` **si y sólo si todas las expresiones evaluadas son verdaderas**. Sino, retorna `false`.
 
 ```js
-true && true  // true
+true && true
+// => true
 ```
 
 <!-- slide -->
@@ -540,7 +576,8 @@ Es tu edad mayor a 18 **y, al mismo tiempo,** menor a 26?
 
 ```js
 var edad = 24;
-edad > 18 && edad < 26; // true
+edad > 18 && edad < 26;
+// => true
 ```
 
 <!-- slide -->
@@ -549,15 +586,18 @@ edad > 18 && edad < 26; // true
 Retorna `true` si **al menos una de las expresiones es verdadera**; sino, retorna `false`.
 
 ```js
-true || true  // true
+true || true
+// => true
 ```
 
 ```js
-true || false  // true
+true || false
+// => true
 ```
 
 ```js
-false || false  // false
+false || false
+// => false
 ```
 
 <!-- slide -->
@@ -567,7 +607,8 @@ false || false  // false
 
 ```js
 // En este caso poner !(true) o bien !true es lo mismo
-!(true)  // false
+!(true)
+// => false
 ```
 
 ```js
@@ -616,7 +657,8 @@ var conValorIndefinido = undefined;
 ```
 
 ```js
-var variableSoloDeclarada;  // undefined
+var variableSoloDeclarada;
+// => undefined
 ```
 
 <!-- slide -->
@@ -677,14 +719,16 @@ var mejoresAmigos = ['Matías', 'Nicolás', 'Mauricio'];
 Primer elemento del array: `[0]`
 
 ```js
-unArregloDeNumeros[0];  // 1
+unArregloDeNumeros[0];
+// => 1
 ```
 
 Último elemento del array: `[longitud del arreglo - 1]`
 
 ```js
 var ultimaPosicion = unArregloDeNumeros.length - 1;
-unArregloDeNumeros[ultimaPosicion];  // 3
+unArregloDeNumeros[ultimaPosicion];
+// => 3
 ```
 
 **Nota:** los índices de los arrays empiezan en 0.
@@ -711,19 +755,22 @@ console.log(mejoresAmigos[2]);
 
 ```js
 var unArregloDeNumeros = [19, 8, 3];
-unArregloDeNumeros[1] = 23;  // [19, 23, 3];
+unArregloDeNumeros[1] = 23;
+// => [19, 23, 3]
 ```
 
 #### Agregar al final
 
 ```js
-unArregloDeNumeros.push('FCC');  // [19, 23, 3, 'FCC'];
+unArregloDeNumeros.push('FCC');
+// => [19, 23, 3, 'FCC']
 ```
 
 #### Sacar el último elemento
 
 ```js
-unArregloDeNumeros.pop();  // 'FCC';
+unArregloDeNumeros.pop();
+// => 'FCC'
 ```
 
 <!-- slide -->
@@ -753,7 +800,8 @@ var unString = 'Puedo acceder a los caracteres de este texto, pero no modificarl
 #### Acceder a un caracter de un `String`
 
 ```js
-console.log(unString[2]);  // e
+console.log(unString[2]);
+// => e
 ```
 
 <!-- slide -->
