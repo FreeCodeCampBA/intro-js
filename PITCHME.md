@@ -1,15 +1,15 @@
-<!-- slide -->
+---
 # Introducción a JavaScript
 
 ![Introducción a JS](https://i.imgur.com/v4zxLB7.png)
 
-<!-- slide -->
+---
 ## ![freeCodeCamp BA logo](https://i.imgur.com/b4MqE3I.png) freeCodeCamp BA
 
 - Leonardo Galante **[@leogln_](https://twitter.com/leogln_)**
 - Nicolás Quiroz **[@_nhsz](https://twitter.com/_nhsz)**
 
-<!-- slide -->
+---
 ## ![freeCodeCamp BA logo](https://i.imgur.com/b4MqE3I.png) freeCodeCamp BA
 
 - **[freecodecamp.com](https://freecodecamp.com)**
