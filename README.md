@@ -1029,6 +1029,7 @@ Algunos **recursos gratuitos** recomendados:
 ### En español
 - **[JavaScript para Gatos](https://jsparagatos.com/)**
 - **[JavaScript101](https://github.com/javascript-101/javascript-101)**
+- **[MDN JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)**
   - En Twitter: [@javascript_101](https://twitter.com/javascript_101)
   - Próximo evento: [Sábado 22/7](https://www.eventbrite.com.ar/e/javascript-101-vol4-tickets-36080812682)
 - Vengan a [nuestros Meetups](https://meetup.com/freecodecampba)!
